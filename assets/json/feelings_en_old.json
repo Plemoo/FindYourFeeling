@@ -1,0 +1,476 @@
+{
+  "name": "Feelings",
+  "children": [
+    {
+      "name": "Positive",
+      "children": [
+        {
+          "name": "Joy",
+          "children": [
+            {
+              "name": "Happy",
+              "children": [
+                {
+                  "name": "Satisfied",
+                  "children": [
+                    {
+                      "name": "Free"
+                    },
+                    {
+                      "name": "Cheerful"
+                    }
+                  ]
+                },
+                {
+                  "name": "Playful",
+                  "children": [
+                    {
+                      "name": "Excited"
+                    },
+                    {
+                      "name": "Brazen"
+                    },
+                    {
+                      "name": "Sassy"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Self-confident",
+              "children": [
+                {
+                  "name": "Accepted",
+                  "children": [
+                    {
+                      "name": "Respected"
+                    },
+                    {
+                      "name": "Trusting"
+                    }
+                  ]
+                },
+                {
+                  "name": "Proud",
+                  "children": [
+                    {
+                      "name": "Self-assured"
+                    },
+                    {
+                      "name": "Successful"
+                    }
+                  ]
+                },
+                {
+                  "name": "Powerful",
+                  "children": [
+                    {
+                      "name": "Strong"
+                    },
+                    {
+                      "name": "Brave"
+                    },
+                    {
+                      "name": "Creative"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Interested",
+              "children": [
+                {
+                  "name": "Curious"
+                },
+                {
+                  "name": "Inquisitive"
+                },
+                {
+                  "name": "Questioning"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Surprise",
+          "children": [
+            {
+              "name": "Excited"
+            },
+            {
+              "name": "Astonished"
+            }
+          ]
+        },
+        {
+          "name": "Connectedness",
+          "children": [
+            {
+              "name": "Optimism",
+              "children": [
+                {
+                  "name": "Hopeful"
+                },
+                {
+                  "name": "Inspired"
+                }
+              ]
+            },
+            {
+              "name": "Trust",
+              "children": [
+                {
+                  "name": "Intimate"
+                },
+                {
+                  "name": "Sensitive"
+                },
+                {
+                  "name": "Empathetic"
+                }
+              ]
+            },
+            {
+              "name": "Peace",
+              "children": [
+                {
+                  "name": "Grateful"
+                },
+                {
+                  "name": "Loving"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Negative",
+      "children": [
+        {
+          "name": "Angry",
+          "children": [
+            {
+              "name": "Furious",
+              "children": [
+                {
+                  "name": "Agitated",
+                  "children": [
+                    {
+                      "name": "Annoyed"
+                    },
+                    {
+                      "name": "Bitter",
+                      "children": [
+                        {
+                          "name": "Envious"
+                        },
+                        {
+                          "name": "Outraged"
+                        },
+                        {
+                          "name": "Indignant"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Rebellious"
+                },
+                {
+                  "name": "Disapproving",
+                  "children": [
+                    {
+                      "name": "Aggressive"
+                    },
+                    {
+                      "name": "Provocative"
+                    },
+                    {
+                      "name": "Hostile"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Humiliated",
+              "children": [
+                {
+                  "name": "Mocked"
+                },
+                {
+                  "name": "Disrespected"
+                },
+                {
+                  "name": "Abandoned",
+                  "children": [
+                    {
+                      "name": "Drenched"
+                    },
+                    {
+                      "name": "Cheated"
+                    },
+                    {
+                      "name": "Betrayed"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Absent",
+              "children": [
+                {
+                  "name": "Cool",
+                  "children": [
+                    {
+                      "name": "Withdrawn"
+                    },
+                    {
+                      "name": "Reserved"
+                    }
+                  ]
+                },
+                {
+                  "name": "Dazed"
+                },
+                {
+                  "name": "Numb"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Weak",
+          "children": [
+            {
+              "name": "Sad",
+              "children": [
+                {
+                  "name": "Frustrated",
+                  "children": [
+                    {
+                      "name": "Offended",
+                      "children": [
+                        {
+                          "name": "Embarrassed"
+                        },
+                        {
+                          "name": "Disappointed"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Desperate",
+                      "children": [
+                        {
+                          "name": "Suffering"
+                        },
+                        {
+                          "name": "Lustless",
+                          "children": [
+                            {
+                              "name": "Unmotivated"
+                            },
+                            {
+                              "name": "Powerless"
+                            },
+                            {
+                              "name": "Depressed",
+                              "children": [
+                                {
+                                  "name": "Empty"
+                                },
+                                {
+                                  "name": "Inferior"
+                                },
+                                {
+                                  "name": "Lonely",
+                                  "children": [
+                                    {
+                                      "name": "Isolated"
+                                    },
+                                    {
+                                      "name": "Abandoned"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Vulnerable",
+                  "children": [
+                    {
+                      "name": "Bullied"
+                    },
+                    {
+                      "name": "Fragile"
+                    }
+                  ]
+                },
+                {
+                  "name": "Guilty",
+                  "children": [
+                    {
+                      "name": "Ashamed"
+                    },
+                    {
+                      "name": "Contrite"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Bored",
+              "children": [
+                {
+                  "name": "Indifferent"
+                },
+                {
+                  "name": "Apathetic"
+                }
+              ]
+            },
+            {
+              "name": "Tired",
+              "children": [
+                {
+                  "name": "Sleepy"
+                },
+                {
+                  "name": "Unfocused"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Restless",
+          "children": [
+            {
+              "name": "Stressed",
+              "children": [
+                {
+                  "name": "Overwhelmed"
+                },
+                {
+                  "name": "Out of control"
+                },
+                {
+                  "name": "Tense",
+                  "children": [
+                    {
+                      "name": "Hectic"
+                    },
+                    {
+                      "name": "Suppressed"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Worried",
+              "children": [
+                {
+                  "name": "Anxious",
+                  "children": [
+                    {
+                      "name": "Surprised",
+                      "children": [
+                        {
+                          "name": "Startled"
+                        },
+                        {
+                          "name": "Horrified"
+                        },
+                        {
+                          "name": "Irritated"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Threatened",
+                      "children": [
+                        {
+                          "name": "Nervous"
+                        },
+                        {
+                          "name": "Exposed"
+                        },
+                        {
+                          "name": "Excluded"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Insecure",
+                  "children": [
+                    {
+                      "name": "Helpless"
+                    },
+                    {
+                      "name": "Inconsequential"
+                    },
+                    {
+                      "name": "Insufficient"
+                    }
+                  ]
+                },
+                {
+                  "name": "Disgusted",
+                  "children": [
+                    {
+                      "name": "Prejudiced",
+                      "children": [
+                        {
+                          "name": "Disapproving"
+                        },
+                        {
+                          "name": "Hesitant"
+                        },
+                        {
+                          "name": "Dismissive"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Disappointed",
+                      "children": [
+                        {
+                          "name": "Appalled"
+                        },
+                        {
+                          "name": "Rebuffed"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Hateful"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

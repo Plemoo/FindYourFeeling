@@ -1,39 +1,48 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { SplashScreen, Stack } from "expo-router";
+import { useEffect, useState } from "react";
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { TouchableOpacity } from "react-native";
+import LanguageSelectionModal from "@/components/LanguageSelectionModal";
+import { useTranslation } from "react-i18next";
+import GermanFlag from "@/components/GermanFlag";
+import UnionJackFlag from "@/components/UnionJackFlag";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
+// SplashScreen.preventAutoHideAsync(); // SplashScreen will be shown and not dismissed automatically (doesnt work on web)
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+    const [fontsLoaded] = useFonts({
+        'Raleway': require('../assets/fonts/Raleway-VariableFont_wght.ttf'),
+        'Raleway-Italic': require('../assets/fonts/Raleway-Italic-VariableFont_wght.ttf'),
+    });
+    useEffect(() => {
+        if (fontsLoaded) {
+            SplashScreen.hideAsync(); // Hide the splash screen after everything was loaded 
+        }
+    }, [fontsLoaded])
+    
+    const { t, i18n } = useTranslation();
+    const [modalVisible, setModalVisible] = useState(false);
+    return (
+        <>
+            <Stack screenOptions={{
+                headerTintColor: "red", headerTitleStyle: { fontFamily: "Raleway" }, headerRight: () => {
+                    return <TouchableOpacity style={{ paddingRight: 10 }} onPressIn={() => setModalVisible(!modalVisible)}>{getFlagByLanguageCode(i18n.language)}</TouchableOpacity>
+                }
+            }}>
+                <Stack.Screen name="index" options={{ title: t("IndexPage") }} />
+                <Stack.Screen name="FeelingsTracker" options={{ title: t("FeelingsTrackerPage") }} />
+            </Stack>
+            <LanguageSelectionModal modalVisible={modalVisible} triggerSetModalVisible={setModalVisible} />
+        </>
+    );
+}
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+function getFlagByLanguageCode(languageCode: string) {
+    switch (languageCode) {
+        case 'de':
+            return <GermanFlag customHeight={20} customWidth={40} />; // German Flag
+        case 'en':
+            return <UnionJackFlag customHeight={20} customWidth={40} />; // Union Jack Flag
+        default:
+            return null;
     }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
 }
