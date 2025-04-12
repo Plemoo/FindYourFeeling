@@ -516,20 +516,6 @@
             ]
           },
           {
-            "name": "Dazed",
-            "sprichwort": {
-              "text": "To be dazed is to be caught between reality and dreams.",
-              "author": "Unknown"
-            }
-          },
-          {
-            "name": "Numb",
-            "sprichwort": {
-              "text": "Numbness is the body's way of protecting the heart.",
-              "author": "Unknown"
-            }
-          },
-          {
             "name": "Weak",
             "sprichwort": {
               "text": "Weakness of attitude becomes weakness of character.",
@@ -753,53 +739,131 @@
                     }
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "name": "Restless",
+            "sprichwort": {
+              "text": "Restlessness is discontent—and discontent is the first necessity of progress.",
+              "author": "Edison"
+            },
+            "children": [
               {
-                "name": "Restless",
+                "name": "Stressed",
                 "sprichwort": {
-                  "text": "Restlessness is discontent—and discontent is the first necessity of progress.",
-                  "author": "Edison"
+                  "text": "Stress is caused by being ‘here’ but wanting to be ‘there.’",
+                  "author": "Tolle"
                 },
                 "children": [
                   {
-                    "name": "Stressed",
+                    "name": "Overwhelmed",
                     "sprichwort": {
-                      "text": "Stress is caused by being ‘here’ but wanting to be ‘there.’",
-                      "author": "Tolle"
+                      "text": "Overwhelm is the mind’s way of telling you to slow down.",
+                      "author": "Unknown"
+                    }
+                  },
+                  {
+                    "name": "Out of control",
+                    "sprichwort": {
+                      "text": "Control your emotions, or they will control you.",
+                      "author": "Unknown"
+                    }
+                  },
+                  {
+                    "name": "Tense",
+                    "sprichwort": {
+                      "text": "Tension is who you think you should be. Relaxation is who you are.",
+                      "author": "Chinese Proverb"
                     },
                     "children": [
                       {
-                        "name": "Overwhelmed",
+                        "name": "Hectic",
                         "sprichwort": {
-                          "text": "Overwhelm is the mind’s way of telling you to slow down.",
+                          "text": "Hectic days are the price of ambition.",
                           "author": "Unknown"
                         }
                       },
                       {
-                        "name": "Out of control",
+                        "name": "Suppressed",
                         "sprichwort": {
-                          "text": "Control your emotions, or they will control you.",
+                          "text": "Suppression of emotions leads to inner turmoil.",
                           "author": "Unknown"
                         }
-                      },
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Worried",
+                "sprichwort": {
+                  "text": "Worry does not empty tomorrow of its sorrow; it empties today of its strength.",
+                  "author": "Ten Boom"
+                },
+                "children": [
+                  {
+                    "name": "Anxious",
+                    "sprichwort": {
+                      "text": "Anxiety is the dizziness of freedom.",
+                      "author": "Kierkegaard"
+                    },
+                    "children": [
                       {
-                        "name": "Tense",
+                        "name": "Surprised",
                         "sprichwort": {
-                          "text": "Tension is who you think you should be. Relaxation is who you are.",
-                          "author": "Chinese Proverb"
+                          "text": "Surprise is the greatest gift life can grant us.",
+                          "author": "Borges"
                         },
                         "children": [
                           {
-                            "name": "Hectic",
+                            "name": "Startled",
                             "sprichwort": {
-                              "text": "Hectic days are the price of ambition.",
+                              "text": "Startle not the mind with sudden fears.",
                               "author": "Unknown"
                             }
                           },
                           {
-                            "name": "Suppressed",
+                            "name": "Horrified",
                             "sprichwort": {
-                              "text": "Suppression of emotions leads to inner turmoil.",
+                              "text": "Horror is the natural reaction to the unknown.",
+                              "author": "Lovecraft"
+                            }
+                          },
+                          {
+                            "name": "Irritated",
+                            "sprichwort": {
+                              "text": "Irritation is the seed of anger.",
+                              "author": "Unknown"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Threatened",
+                        "sprichwort": {
+                          "text": "Feeling threatened is a sign of insecurity.",
+                          "author": "Unknown"
+                        },
+                        "children": [
+                          {
+                            "name": "Nervous",
+                            "sprichwort": {
+                              "text": "Nervousness is the price of preparation.",
+                              "author": "Unknown"
+                            }
+                          },
+                          {
+                            "name": "Exposed",
+                            "sprichwort": {
+                              "text": "To be exposed is to be vulnerable, and to be vulnerable is to be alive.",
+                              "author": "Unknown"
+                            }
+                          },
+                          {
+                            "name": "Excluded",
+                            "sprichwort": {
+                              "text": "Exclusion is the silent killer of belonging.",
                               "author": "Unknown"
                             }
                           }
@@ -808,179 +872,101 @@
                     ]
                   },
                   {
-                    "name": "Worried",
+                    "name": "Insecure",
                     "sprichwort": {
-                      "text": "Worry does not empty tomorrow of its sorrow; it empties today of its strength.",
-                      "author": "Ten Boom"
+                      "text": "Insecurity is the root of all fear.",
+                      "author": "Unknown"
                     },
                     "children": [
                       {
-                        "name": "Anxious",
+                        "name": "Helpless",
                         "sprichwort": {
-                          "text": "Anxiety is the dizziness of freedom.",
-                          "author": "Kierkegaard"
-                        },
-                        "children": [
-                          {
-                            "name": "Surprised",
-                            "sprichwort": {
-                              "text": "Surprise is the greatest gift life can grant us.",
-                              "author": "Borges"
-                            },
-                            "children": [
-                              {
-                                "name": "Startled",
-                                "sprichwort": {
-                                  "text": "Startle not the mind with sudden fears.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Horrified",
-                                "sprichwort": {
-                                  "text": "Horror is the natural reaction to the unknown.",
-                                  "author": "Lovecraft"
-                                }
-                              },
-                              {
-                                "name": "Irritated",
-                                "sprichwort": {
-                                  "text": "Irritation is the seed of anger.",
-                                  "author": "Unknown"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Threatened",
-                            "sprichwort": {
-                              "text": "Feeling threatened is a sign of insecurity.",
-                              "author": "Unknown"
-                            },
-                            "children": [
-                              {
-                                "name": "Nervous",
-                                "sprichwort": {
-                                  "text": "Nervousness is the price of preparation.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Exposed",
-                                "sprichwort": {
-                                  "text": "To be exposed is to be vulnerable, and to be vulnerable is to be alive.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Excluded",
-                                "sprichwort": {
-                                  "text": "Exclusion is the silent killer of belonging.",
-                                  "author": "Unknown"
-                                }
-                              }
-                            ]
-                          }
-                        ]
+                          "text": "Helplessness is the first step toward asking for help.",
+                          "author": "Unknown"
+                        }
                       },
                       {
-                        "name": "Insecure",
+                        "name": "Inconsequential",
                         "sprichwort": {
-                          "text": "Insecurity is the root of all fear.",
+                          "text": "No act of kindness, no matter how small, is inconsequential.",
+                          "author": "Aesop"
+                        }
+                      },
+                      {
+                        "name": "Insufficient",
+                        "sprichwort": {
+                          "text": "Feeling insufficient is the first step toward growth.",
                           "author": "Unknown"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Disgusted",
+                    "sprichwort": {
+                      "text": "Disgust is the guardian of our boundaries.",
+                      "author": "Unknown"
+                    },
+                    "children": [
+                      {
+                        "name": "Prejudiced",
+                        "sprichwort": {
+                          "text": "Prejudice is the child of ignorance.",
+                          "author": "Hazlitt"
                         },
                         "children": [
                           {
-                            "name": "Helpless",
+                            "name": "Disapproving",
                             "sprichwort": {
-                              "text": "Helplessness is the first step toward asking for help.",
+                              "text": "Disapproval is the shadow of judgment.",
                               "author": "Unknown"
                             }
                           },
                           {
-                            "name": "Inconsequential",
+                            "name": "Hesitant",
                             "sprichwort": {
-                              "text": "No act of kindness, no matter how small, is inconsequential.",
-                              "author": "Aesop"
+                              "text": "Hesitation is the seed of missed opportunities.",
+                              "author": "Unknown"
                             }
                           },
                           {
-                            "name": "Insufficient",
+                            "name": "Dismissive",
                             "sprichwort": {
-                              "text": "Feeling insufficient is the first step toward growth.",
+                              "text": "Dismissiveness is the armor of the insecure.",
                               "author": "Unknown"
                             }
                           }
                         ]
                       },
                       {
-                        "name": "Disgusted",
+                        "name": "Disappointed",
                         "sprichwort": {
-                          "text": "Disgust is the guardian of our boundaries.",
-                          "author": "Unknown"
+                          "text": "Disappointment is the nurse of wisdom.",
+                          "author": "Bayly"
                         },
                         "children": [
                           {
-                            "name": "Prejudiced",
+                            "name": "Appalled",
                             "sprichwort": {
-                              "text": "Prejudice is the child of ignorance.",
-                              "author": "Hazlitt"
-                            },
-                            "children": [
-                              {
-                                "name": "Disapproving",
-                                "sprichwort": {
-                                  "text": "Disapproval is the shadow of judgment.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Hesitant",
-                                "sprichwort": {
-                                  "text": "Hesitation is the seed of missed opportunities.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Dismissive",
-                                "sprichwort": {
-                                  "text": "Dismissiveness is the armor of the insecure.",
-                                  "author": "Unknown"
-                                }
-                              }
-                            ]
+                              "text": "To be appalled is to be awakened to injustice.",
+                              "author": "Unknown"
+                            }
                           },
                           {
-                            "name": "Disappointed",
+                            "name": "Rebuffed",
                             "sprichwort": {
-                              "text": "Disappointment is the nurse of wisdom.",
-                              "author": "Bayly"
-                            },
-                            "children": [
-                              {
-                                "name": "Appalled",
-                                "sprichwort": {
-                                  "text": "To be appalled is to be awakened to injustice.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Rebuffed",
-                                "sprichwort": {
-                                  "text": "Rebuffs are the stepping stones to resilience.",
-                                  "author": "Unknown"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Hateful",
-                            "sprichwort": {
-                              "text": "Hatred is the coward's revenge for being intimidated.",
-                              "author": "Shaw"
+                              "text": "Rebuffs are the stepping stones to resilience.",
+                              "author": "Unknown"
                             }
                           }
                         ]
+                      },
+                      {
+                        "name": "Hateful",
+                        "sprichwort": {
+                          "text": "Hatred is the coward's revenge for being intimidated.",
+                          "author": "Shaw"
+                        }
                       }
                     ]
                   }
