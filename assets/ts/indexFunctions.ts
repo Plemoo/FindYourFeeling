@@ -4,18 +4,7 @@ import allFeelingsEn from "../../assets/json/feelings_en.json";
 import { LANGUAGE } from "../styles/constants";
 
 export function getPathOfFeeling(feeling: string, allFeelings: INestedFeelings): string[] | null {
-    const findPath = (obj: any, predicate: (value: any) => boolean, path: string[] = []): string[] | null => {
-        for (const key in obj) {
-            const newPath = [...path, key]; // Aktuellen Pfad erweitern
-            if (predicate(obj[key])) return newPath; // Wert gefunden → Pfad zurückgeben
-            if (_.isObject(obj[key])) {
-                const deepPath = findPath(obj[key], predicate, newPath);
-                if (deepPath) return deepPath; // Falls in der Tiefe gefunden → Pfad zurückgeben
-            }
-        }
-        return null; // Wert nicht gefunden}
-    }
-    return findPath(allFeelings, (val) => val === feeling); // Beispiel: Suche den Pfad für den Wert "Berlin"
+    return findPathForNameInFeelings(allFeelings, (val) => val === feeling, "name"); // Beispiel: Suche den Pfad für den Wert "Berlin"
 }
 
 
@@ -66,22 +55,22 @@ export function getFeelingsBasedOnLanguage(language: string): INestedFeelings {
  * @param obj is the recursive object to search in. It is either an array of INestedFeelings or a single INestedFeelings object.
  * @param predicate 
  * @param path 
+ * @param searchKey The key to search for in the object;
  * @returns 
  */
-export function findPathForNameInFeelings (obj: INestedFeelings[]|INestedFeelings, predicate: (nameValueToSearch: string) => boolean, path: string[] = []): string[] | null  {
+function findPathForNameInFeelings (obj: INestedFeelings[]|INestedFeelings, predicate: (nameValueToSearch: string) => boolean, searchKey:keyof INestedFeelings, path: string[] = []): string[] | null  {
     for (const key in obj) {
         const nestedChildrenKey: keyof INestedFeelings = "children";
-        const nameKey: keyof INestedFeelings = "name";
         const newPath = [...path, key]; // Aktuellen Pfad erweitern
         if(_.isArray(obj)){ // Wenn es ein Array ist, den Index als Zahl verwenden (wurde gerade in children reingegangen) (Pfad kann noch nciht gefunden worden sein)
             let arrayIndex = _.toInteger(key)
-            const deepPath = findPathForNameInFeelings(obj[arrayIndex], predicate, newPath);
+            const deepPath = findPathForNameInFeelings(obj[arrayIndex], predicate,searchKey, newPath);
             if (deepPath) return deepPath; // Falls in der Tiefe gefunden → Pfad zurückgeben
-        }else if(_.isPlainObject(obj) && key === nameKey && _.isString(obj[key]) && predicate(obj[key])){ // Wenn es ein PlainObject ist, prüfen, ob mit dem Key der gesuchte wert gefunden wurde (geprüft über predicate)
+        }else if(_.isPlainObject(obj) && key === searchKey && _.isString(obj[key]) && predicate(obj[key])){ // Wenn es ein PlainObject ist, prüfen, ob mit dem Key der gesuchte wert gefunden wurde (geprüft über predicate)
             return newPath; // Wert gefunden → Pfad zurückgeben
         }else if(_.isPlainObject(obj) && key === nestedChildrenKey && _.isArray(obj[key])){ // Ist Object und key ist children und children ist ein Array und Wert wurde noch nicht gefunden
             let nestedFeelingSubtree: INestedFeelings[] = obj[key];
-            const deepPath = findPathForNameInFeelings(nestedFeelingSubtree, predicate, newPath);
+            const deepPath = findPathForNameInFeelings(nestedFeelingSubtree, predicate,searchKey, newPath);
             if (deepPath) return deepPath; // Falls in der Tiefe gefunden → Pfad zurückgeben    
         }
     }

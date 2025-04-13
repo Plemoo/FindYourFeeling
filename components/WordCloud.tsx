@@ -2,19 +2,10 @@ import { View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Dimensions } from 'react-native';
 import Svg, { Text } from 'react-native-svg';
+import _, { forEach } from 'lodash';
+import { COLORS } from '@/assets/styles/constants';
 
 const { width, height } = Dimensions.get("window");
-
-const words = [
-  { word: "Freude", weight: 5, color: "#FF6B6B" },
-  { word: "Mut", weight: 3, color: "#4ECDC4" },
-  { word: "Liebe", weight: 4, color: "#FFD93D" },
-  { word: "Vertrauen", weight: 2, color: "#1A535C" },
-  { word: "Neugier", weight: 3, color: "#FF9F1C" },
-  { word: "Kreativität", weight: 4, color: "#5F0F40" },
-  { word: "Sicherheit", weight: 2, color: "#6A0572" },
-];
-
   
   type PositionedWord = {
     x: number;
@@ -27,7 +18,7 @@ const words = [
     height: number;
   };
   
-  function generateWordCloud(wordList: typeof words): PositionedWord[] {
+  function generateWordCloud(wordList:IWordCloudProps[]): PositionedWord[] {
     const positions: PositionedWord[] = [];
     const cellSize = 60;
   
@@ -70,7 +61,6 @@ const words = [
         }
       }
     }
-    console.log(spiralOffsets)
     for (let wordObj of wordList) {
       const fontSize = 12 + wordObj.weight * 4;
       const rotation: 0 | 90 = Math.random() > 0.5 ? 0 : 90;
@@ -119,13 +109,24 @@ const words = [
     return positions;
   }
 
-const WordCloud: React.FC<any> = () => {
+  type WordCloudProps = {
+    wordCloudFeelings: ISingleStoreFeeling[];
+  }
+
+
+
+const WordCloud: React.FC<WordCloudProps> = ({wordCloudFeelings}) => {
     const [wordsPositioned, setWordsPositioned] = useState<PositionedWord[]>([]);
     useEffect(() => {
-      const layout = generateWordCloud(words);
+      const wordCloudColors = [COLORS.feelingCenter, COLORS.feelingOne, COLORS.feelingTwo, COLORS.feelingThree, COLORS.feelingFour];
+      let wordCloudWords: IWordCloudProps[] = wordCloudFeelings.map((word) => ({
+        word: word.name,
+        weight: word.count,
+        color: wordCloudColors[_.random(0,wordCloudColors.length-1)], // Zufällige Farbe aus dem Array
+      }));
+      const layout = generateWordCloud(wordCloudWords);
       setWordsPositioned(layout);
     }, []);
-    console.log(wordsPositioned)
     return (
       <View style={{ flex: 1, backgroundColor: "#fff", justifyContent: "center", alignItems: "center" }}>
         <Svg width={width} height={height}>

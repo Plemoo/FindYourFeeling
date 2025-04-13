@@ -1,7 +1,8 @@
 {
     "welcome": "Willkommen in der App!",
     "language": "Sprache",
-    "feelingsButton":"So fühle ich mich",
+    "feelingsButton":"Klicke auf dein Gefühl",
+    "selectableFeelingButton":"Ich fühle (mich) {{feeling}}",
     "back":"Zurück",
     "IndexPage":"Willkommen in der App!",
     "FeelingsTrackerPage":"Gefühlstracker",

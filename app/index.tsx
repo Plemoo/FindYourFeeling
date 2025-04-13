@@ -1,54 +1,82 @@
 import { Pressable, Text as ReactText, TouchableOpacity, View } from "react-native";
 import DonutChart from "../components/DonutChart";
 import { StrictMode, useEffect, useState } from "react";
-import {styles} from "../assets/styles/styles"
+import { styles } from "../assets/styles/styles"
 import _ from "lodash"
 import "../assets/ts/i18next"
-import { useTranslation } from "react-i18next";   
+import { useTranslation } from "react-i18next";
 import i18next from "../assets/ts/i18next";
-import { arraysEqual, findPathForNameInFeelings, getChildFeelingsBasedOnParent, getFeelingsBasedOnLanguage, getPathOfFeeling } from "@/assets/ts/indexFunctions";
+import { arraysEqual, getChildFeelingsBasedOnParent, getFeelingsBasedOnLanguage, getPathOfFeeling } from "@/assets/ts/indexFunctions";
+import Sprichwort from "@/components/Sprichwort";
+import { TouchableHighlight } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 export default function Index() {
   let allFeelings: INestedFeelings = getFeelingsBasedOnLanguage(i18next.language);
   const [currentFeelings, setCurrentFeelings] = useState<string[]>(getChildFeelingsBasedOnParent(allFeelings.name, allFeelings));
   const [chosenFeeling, setChosenFeeling] = useState<string>(allFeelings.name);
+  const [sprichwort, setSprichwort] = useState<ISprichwort>(allFeelings.sprichwort);
   const { t } = useTranslation();
   i18next.on('languageChanged', () => {
-    // Müssen noch die Feelings inder alten Sprache sein
+    // Müssen noch die Feelings in der alten Sprache sein
     let sameFeelingInOtherLanguage = getPathOfFeeling(chosenFeeling, allFeelings);
     allFeelings = getFeelingsBasedOnLanguage(i18next.language);
-    if(sameFeelingInOtherLanguage){
+    if (sameFeelingInOtherLanguage) {
+      let sprichwortKey: keyof INestedFeelings = "sprichwort";
+      let sprichwortForCurrentFeeling = _.chain(sameFeelingInOtherLanguage).dropRight().push(sprichwortKey).value();
+      setSprichwort(_.get(allFeelings, sprichwortForCurrentFeeling));
       setChosenFeeling(_.get(allFeelings, sameFeelingInOtherLanguage));
     }
   });
   // When new Feeling is chosen, we need to update the current feelings
-  useEffect(()=>{
+  useEffect(() => {
     let newFeelings = getChildFeelingsBasedOnParent(chosenFeeling, allFeelings);
-    if(!arraysEqual(newFeelings,currentFeelings)){
+    if (!arraysEqual(newFeelings, currentFeelings)) {
       setCurrentFeelings(newFeelings)
     }
-  },[chosenFeeling])
-  
-  function calledByChild(clickedFeeling:string, previouslyChosenFeeling:string){
-    if(clickedFeeling != previouslyChosenFeeling){
-      setChosenFeeling(clickedFeeling)
-    }else{ // Clicked Feeling == chosen Feeling (in die Mitte geklickt)
+  }, [chosenFeeling])
 
-      
-      // Beispiel: Suche den Pfad für den Wert "Berlin"
-      const path = findPathForNameInFeelings(allFeelings, (searchVal) => searchVal === clickedFeeling);
-      if(path){
-        let newPath = path.slice(0,-3);
-        newPath.push("name");
-        let previousFeeling = _.get(allFeelings,newPath.join("."));
-        setChosenFeeling(previousFeeling)
-      }
+  function calledByChild(clickedFeeling: string, previouslyChosenFeeling: string) {
+    let sprichwortKey: keyof INestedFeelings = "sprichwort";
+    let nameKey: keyof INestedFeelings = "name";
+    const path = getPathOfFeeling(clickedFeeling, allFeelings);
+    if (path == null) {
+      return;
+    }
+    if (clickedFeeling != previouslyChosenFeeling) { // Auf eines der äußeren Segmente geklickt
+      let pathToSprichwortOfCurrentFeeling = _.chain(path).dropRight().push(sprichwortKey).join(".").value();
+      setSprichwort(_.get(allFeelings, pathToSprichwortOfCurrentFeeling));
+      setChosenFeeling(clickedFeeling)
+    } else { // Clicked Feeling == chosen Feeling (in die Mitte geklickt)
+      let pathToParentFeeling = _.chain(path).slice(0, -3).push(nameKey).join(".").value();
+      let pathToParentSprichwort = _.chain(path).slice(0, -3).push(sprichwortKey).join(".").value();
+      let previousFeeling = _.get(allFeelings, pathToParentFeeling);
+      setSprichwort(_.get(allFeelings, pathToParentSprichwort));
+      setChosenFeeling(previousFeeling)
+
     }
   }
 
   const saveSelectionAndReset = () => {
     // chosenFeeling zwischenspeichern
+    console.log("ALL KEYS", AsyncStorage.getAllKeys());
+    let storedFeelingsKey: keyof IStoredFeelings = "storedFeelings";
+    AsyncStorage.getItem(storedFeelingsKey).then((value) => {
+      let storedFeelings: IStoredFeelings;
+      if (value == null) { // Wenn noch nichts gespeichert ist
+        storedFeelings = { storedFeelings: [{ name: chosenFeeling, count: 1, }] };
+      } else { // Wenn schon etwas gespeichert ist
+        storedFeelings = JSON.parse(value);
+        let feelingExists = storedFeelings.storedFeelings.find((feeling) => feeling.name === chosenFeeling);
+        if (feelingExists) {
+          feelingExists.count++;
+        } else {
+          storedFeelings.storedFeelings.push({ name: chosenFeeling, count: 1 });
+        }
+      }
+      AsyncStorage.setItem(storedFeelingsKey, JSON.stringify(storedFeelings));
+    });
     resetSelection();
   }
   const resetSelection = () => {
@@ -56,23 +84,34 @@ export default function Index() {
     setChosenFeeling(allFeelings.name);
   }
 
+  const getFeelingSaveButtonText = () => {
+    if (chosenFeeling == allFeelings.name) {
+      return t("feelingsButton")
+    } else {
+      return t("selectableFeelingButton", { feeling: chosenFeeling });
+    }
+  }
   return (
     <StrictMode>
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center"
-      }}
-    >
-        <ReactText></ReactText>
-
-        {/* Hier ist der WordCloud-Component */}
-      {/* <WordCloud/> */}
-        <DonutChart centerText={chosenFeeling} allFeelings={allFeelings} words={currentFeelings} randomizer={Math.round(Math.random() * 360)} clickedFeeling={(clickedFeeling)=>calledByChild(clickedFeeling,chosenFeeling)} />
-        <Pressable style={styles.customButton} onPress={() => saveSelectionAndReset()}>
-          <ReactText style={styles.customButtonText}>{t("feelingsButton")}</ReactText>
-        </Pressable>
-    </View>
+      <View style={styles.container}>
+        <Sprichwort text={sprichwort.text} author={sprichwort.author} />
+        <View style={styles.feelingContainer}>
+          <DonutChart centerText={chosenFeeling} allFeelings={allFeelings} words={currentFeelings} randomizer={Math.round(Math.random() * 360)} clickedFeeling={(clickedFeeling) => calledByChild(clickedFeeling, chosenFeeling)} />
+          <View style={styles.saveFeelingButtonContainer}>
+            <TouchableHighlight
+              disabled={!chosenFeeling || chosenFeeling === allFeelings.name}
+              onPress={() => saveSelectionAndReset()}
+              style={
+                (!chosenFeeling || chosenFeeling === allFeelings.name)
+                  ? styles.disabledSaveFeelingButton
+                  : styles.saveFeelingButton
+              }
+            >
+              <ReactText style={styles.saveFeelingButtonText}>{getFeelingSaveButtonText()}</ReactText>
+            </TouchableHighlight>
+          </View>
+        </View>
+      </View>
     </StrictMode>
   );
 }

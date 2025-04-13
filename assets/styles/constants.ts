@@ -5,6 +5,11 @@ export const COLORS = {
     text: "#212529",
     textLight: "#FFFFFF",
     black:"#000000",
+    feelingOne:'#AAF0C1', 
+    feelingTwo: '#efa94a',
+    feelingThree: '#B2A4D4',
+    feelingFour:'#BEBEBE',
+    feelingCenter:"lightblue"
   };
 
   export const FONT_SIZES = {

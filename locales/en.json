@@ -1,7 +1,8 @@
 {
     "welcome": "Welcome to the app!",
     "language": "Language",
-    "feelingsButton":"That's how I feel",
+    "feelingsButton":"Click on how you feel",
+    "selectableFeelingButton":"I feel {{feeling}}",
     "back":"Back",
     "IndexPage":"Welcome!",
     "FeelingsTrackerPage":"Feeling Tracker",
