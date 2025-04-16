@@ -1,980 +1,1106 @@
 {
+    "id": 0,
     "name": "Feelings",
-    "sprichwort":{
-      "text":"Never play with the feelings of others, because you may win the game, but the risk is that you will surely lose the person for a life time.",
-      "author":"Shakespeare"
-  },
+    "sprichwort": {
+        "text": "Never play with the feelings of others, because you may win the game, but the risk is that you will surely lose the person for a life time.",
+        "author": "Shakespeare"
+    },
     "children": [
-      {
-        "name": "Positive",
-        "sprichwort": {
-          "text": "Positive thinking is at worst a zero-sum game.",
-          "author": "Ferstl"
-        },
-        "children": [
-          {
-            "name": "Joy",
+        {
+            "id": 1,
+            "name": "Positive",
             "sprichwort": {
-              "text": "Shared joy is double joy.",
-              "author": "Cicero"
+                "text": "Positive thinking is at worst a zero-sum game.",
+                "author": "Ferstl"
             },
             "children": [
-              {
-                "name": "Happy",
-                "sprichwort": {
-                  "text": "Those who are happy feel. Those who are unhappy think.",
-                  "author": "Blanck"
-                },
-                "children": [
-                  {
-                    "name": "Satisfied",
+                {
+                    "id": 2,
+                    "name": "Joy",
                     "sprichwort": {
-                      "text": "It would be easier to make everyone rich than to make everyone satisfied.",
-                      "author": "Wertheimer"
+                        "text": "Shared joy is double joy.",
+                        "author": "Cicero"
                     },
                     "children": [
                         {
-                        "name": "Free",
-                        "sprichwort": {
-                          "text": "Freedom is worth nothing if it does not include the right to make mistakes.",
-                          "author": "Gandhi"
-                        }
-                      },
-                      {
-                        "name": "Cheerful",
-                        "sprichwort": {
-                          "text": "A cheerful person is like sunshine in the house.",
-                          "author": "Unknown"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Playful",
-                    "sprichwort": {
-                      "text": "People don't stop playing because they grow old; they grow old because they stop playing!",
-                      "author": "Holmes"
-                    },
-                    "children": [
-                      {
-                        "name": "Excited",
-                        "sprichwort": {
-                          "text": "Our feelings are always aroused before our intellect.",
-                          "author": "Wilde"
-                        }
-                      },
-                      {
-                        "name": "Brazen",
-                        "sprichwort": {
-                          "text": "Foolishness protects against shame, just as brazenness protects against poverty.",
-                          "author": "Da Vinci"
-                        }
-                      },
-                      {
-                        "name": "Sassy",
-                        "sprichwort": {
-                          "text": "Don't let them get you down, be cheeky, wild, and wonderful!",
-                          "author": "Lindgren"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Self-confident",
-                "sprichwort": {
-                  "text": "Self-confidence is the first step to success.",
-                  "author": "Emerson"
-                },
-                "children": [
-                  {
-                    "name": "Accepted",
-                    "sprichwort": {
-                      "text": "As soon as we accept our limits, we go beyond them.",
-                      "author": "Einstein"
-                    },
-                    "children": [
-                      {
-                        "name": "Respected",
-                        "sprichwort": {
-                          "text": "Respect yourself, and others will respect you.",
-                          "author": "Confucius"
-                        }
-                      },
-                      {
-                        "name": "Trusting",
-                        "sprichwort": {
-                          "text": "Trust is an oasis of the heart that the caravan of thought will never reach.",
-                          "author": "Gibran"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Proud",
-                    "sprichwort": {
-                      "text": "Vanity feeds on the praise of others; pride is self-sufficient.",
-                      "author": "Kunad"
-                    },
-                    "children": [
-                      {
-                        "name": "Self-assured",
-                        "sprichwort": {
-                          "text": "It doesn't matter where you live if you are at home within yourself.",
-                          "author": "Schippers"
-                        }
-                      },
-                      {
-                        "name": "Successful",
-                        "sprichwort": {
-                          "text": "Success is the ability to go from one failure to another without losing enthusiasm.",
-                          "author": "Churchill"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Powerful",
-                    "sprichwort": {
-                      "text": "The abuse of greatness is when it separates power from conscience.",
-                      "author": "Shakespeare"
-                    },
-                    "children": [
-                      {
-                        "name": "Strong",
-                        "sprichwort": {
-                          "text": "He who conquers others has strength. He who conquers himself is strong.",
-                          "author": "Lao Tzu"
-                        }
-                      },
-                      {
-                        "name": "Brave",
-                        "sprichwort": {
-                          "text": "Courage is the magic that turns dreams into reality.",
-                          "author": "Unknown"
-                        }
-                      },
-                      {
-                        "name": "Creative",
-                        "sprichwort": {
-                          "text": "Every child is an artist. The problem is how to remain an artist once we grow up.",
-                          "author": "Picasso"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Interested",
-                "sprichwort": {
-                  "text": "Knowing what interests you is the prerequisite for getting others interested in it.",
-                  "author": "Pater"
-                },
-                "children": [
-                  {
-                    "name": "Curious",
-                    "sprichwort": {
-                      "text": "Curiosity is the best teacher.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Inquisitive",
-                    "sprichwort": {
-                      "text": "Any foolish boy can crush a beetle. But all the professors in the world cannot create one.",
-                      "author": "Schopenhauer"
-                    }
-                  },
-                  {
-                    "name": "Questioning",
-                    "sprichwort": {
-                      "text": "You can tell whether a man is clever by his answers. You can tell whether a man is wise by his questions.",
-                      "author": "Mahfouz"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Surprise",
-            "sprichwort": {
-              "text": "Sometimes a victory surprises no one more than the victor himself.",
-              "author": "Weiss"
-            },
-            "children": [
-              {
-                "name": "Excited",
-                "sprichwort": {
-                  "text": "Eat only when hungry and drink only when thirsty, and in excitement, better throw the food away.",
-                  "author": "Talmud"
-                }
-              },
-              {
-                "name": "Astonished",
-                "sprichwort": {
-                  "text": "Those who walk through life with open eyes and ears always find reasons to be astonished.",
-                  "author": "Ferstl"
-                }
-              }
-            ]
-          },
-          {
-            "name": "Connectedness",
-            "sprichwort": {
-              "text": "Love is the only force capable of transforming an enemy into a friend.",
-              "author": "King"
-            },
-            "children": [
-              {
-                "name": "Optimism",
-                "sprichwort": {
-                  "text": "The optimist is no less often wrong than the pessimist, but he lives more cheerfully.",
-                  "author": "Rivel"
-                },
-                "children": [
-                  {
-                    "name": "Hopeful",
-                    "sprichwort": {
-                      "text": "Hope is the rainbow over the cascading stream of life.",
-                      "author": "Nietzsche"
-                    }
-                  },
-                  {
-                    "name": "Inspired",
-                    "sprichwort": {
-                      "text": "I have no education. I have inspiration. If I were educated, I would be a damn fool.",
-                      "author": "Marley"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "Trust",
-                "sprichwort": {
-                  "text": "I stand in the belief that it is sometimes not useless to place a certain noble trust in one's own abilities.",
-                  "author": "Kant"
-                },
-                "children": [
-                  {
-                    "name": "Intimate",
-                    "sprichwort": {
-                      "text": "Our intimacy rested securely on the awareness of numerous inner commonalities.",
-                      "author": "Freud"
-                    }
-                  },
-                  {
-                    "name": "Sensitive",
-                    "sprichwort": {
-                      "text": "We are guided by our compassion, and the extent of our compassion is determined by our sensitivity.",
-                      "author": "Hazlitt"
-                    }
-                  },
-                  {
-                    "name": "Empathetic",
-                    "sprichwort": {
-                      "text": "Everyone sees what you seem. Only a few feel what you are.",
-                      "author": "Machiavelli"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "Peace",
-                "sprichwort": {
-                  "text": "There is no way to peace, for peace is the way.",
-                  "author": "Gandhi"
-                },
-                "children": [
-                  {
-                    "name": "Grateful",
-                    "sprichwort": {
-                      "text": "Gratitude is not only the greatest of all virtues but also the mother of all others.",
-                      "author": "Cicero"
-                    }
-                  },
-                  {
-                    "name": "Loving",
-                    "sprichwort": {
-                      "text": "Love does not make blind. The lover simply sees far more than is there.",
-                      "author": "Hassencamp"
-                    }
-                  }
-                ]
-              }
-            ]
-          }          
-        ]
-      },
-      {
-        "name": "Negative",
-        "sprichwort": {
-          "text": "The only real enemies of a person are their own negative thoughts.",
-          "author": "Einstein"
-        },
-        "children": [
-          {
-            "name": "Angry",
-            "sprichwort": {
-              "text": "Do not do anything when angry before reciting the alphabet.",
-              "author": "Voltaire"
-            },
-            "children": [
-              {
-                "name": "Furious",
-                "sprichwort": {
-                  "text": "To be furious is to avenge the faults of others on ourselves.",
-                  "author": "Pope"
-                },
-                "children": [
-                  {
-                    "name": "Agitated",
-                    "sprichwort": {
-                      "text": "I stand speechless before the courage simple people muster in the face of pain and suffering.",
-                      "author": "Bosmans"
-                    },
-                    "children": [
-                      {
-                        "name": "Annoyed",
-                        "sprichwort": {
-                          "text": "People are like clouds; they pass by and bring rain or sunshine.",
-                          "author": "Unknown"
-                        }
-                      },
-                      {
-                        "name": "Bitter",
-                        "sprichwort": {
-                          "text": "In every happiness, there is a drop of bitterness.",
-                          "author": "Knittel"
-                        },
-                        "children": [
-                          {
-                            "name": "Envious",
+                            "id": 3,
+                            "name": "Happy",
                             "sprichwort": {
-                              "text": "Freedom from envy is the genius of those who have no reason to envy anyone.",
-                              "author": "Altenberg"
-                            }
-                          },
-                          {
-                            "name": "Outraged",
-                            "sprichwort": {
-                              "text": "Every outrage has its comic side.",
-                              "author": "Camus"
-                            }
-                          },
-                          {
-                            "name": "Indignant",
-                            "sprichwort": {
-                              "text": "I am indignant mostly about what does not bother anyone else.",
-                              "author": "Jung"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Rebellious",
-                    "sprichwort": {
-                      "text": "Rebellion is a knot of the heart, not of the mind.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Disapproving",
-                    "sprichwort": {
-                      "text": "We are rich only through what we give, and poor only through what we refuse.",
-                      "author": "Emerson"
-                    },
-                    "children": [
-                      {
-                        "name": "Aggressive",
-                        "sprichwort": {
-                          "text": "Attack can be the best defense, but aggression is the worst defense.",
-                          "author": "Schützbach"
-                        }
-                      },
-                      {
-                        "name": "Provocative",
-                        "sprichwort": {
-                          "text": "An artist who does not provoke becomes invisible. Art that does not evoke strong reactions has no value.",
-                          "author": "Dali"
-                        }
-                      },
-                      {
-                        "name": "Hostile",
-                        "sprichwort": {
-                          "text": "Always forgive your enemies; nothing annoys them so much.",
-                          "author": "Wilde"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Humiliated",
-                "sprichwort": {
-                  "text": "We rarely console ourselves over great humiliations—we forget them.",
-                  "author": "Clapiers"
-                },
-                "children": [
-                  {
-                    "name": "Mocked",
-                    "sprichwort": {
-                      "text": "Crowned today, mocked tomorrow.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Disrespected",
-                    "sprichwort": {
-                      "text": "Disrespect prevents love from growing.",
-                      "author": "Ou-Chad"
-                    }
-                  },
-                  {
-                    "name": "Abandoned",
-                    "sprichwort": {
-                      "text": "Loneliness makes us harder on ourselves and more longing for people; in both, it improves character.",
-                      "author": "Nietzsche"
-                    },
-                    "children": [
-                      {
-                        "name": "Drenched",
-                        "sprichwort": {
-                          "text": "When one loves, one does not long remember the offense.",
-                          "author": "Dostoevsky"
-                        }
-                      },
-                      {
-                        "name": "Cheated",
-                        "sprichwort": {
-                          "text": "Who has betrayed you more often than yourself?",
-                          "author": "Franklin"
-                        }
-                      },
-                      {
-                        "name": "Betrayed",
-                        "sprichwort": {
-                          "text": "Without betrayal, loyalty would go unnoticed.",
-                          "author": "Unknown"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Absent",
-                "sprichwort": {
-                  "text": "Absence sharpens love, presence strengthens it.",
-                  "author": "Thomas Fuller"
-                },
-                "children": [
-                  {
-                    "name": "Cool",
-                    "sprichwort": {
-                      "text": "Coolness is the art of appearing calm when you are not.",
-                      "author": "Unknown"
-                    },
-                    "children": [
-                      {
-                        "name": "Withdrawn",
-                        "sprichwort": {
-                          "text": "Sometimes, silence is the loudest cry.",
-                          "author": "Unknown"
-                        }
-                      },
-                      {
-                        "name": "Reserved",
-                        "sprichwort": {
-                          "text": "A reserved person is like a closed book; you need patience to read it.",
-                          "author": "Unknown"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Dazed",
-                    "sprichwort": {
-                      "text": "To be dazed is to be caught between reality and dreams.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Numb",
-                    "sprichwort": {
-                      "text": "Numbness is the body's way of protecting the heart.",
-                      "author": "Unknown"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Weak",
-            "sprichwort": {
-              "text": "Weakness of attitude becomes weakness of character.",
-              "author": "Einstein"
-            },
-            "children": [
-              {
-                "name": "Sad",
-                "sprichwort": {
-                  "text": "Sadness flies away on the wings of time.",
-                  "author": "La Fontaine"
-                },
-                "children": [
-                  {
-                    "name": "Frustrated",
-                    "sprichwort": {
-                      "text": "Frustration is the gap between expectation and reality.",
-                      "author": "Unknown"
-                    },
-                    "children": [
-                      {
-                        "name": "Offended",
-                        "sprichwort": {
-                          "text": "An offended heart is the breeding ground for resentment.",
-                          "author": "Unknown"
-                        },
-                        "children": [
-                          {
-                            "name": "Embarrassed",
-                            "sprichwort": {
-                              "text": "Embarrassment is the price of admission to the human experience.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Disappointed",
-                            "sprichwort": {
-                              "text": "Disappointment is a sort of bankruptcy—the bankruptcy of a soul that expends too much in hope and expectation.",
-                              "author": "Unknown"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Desperate",
-                        "sprichwort": {
-                          "text": "Desperation is sometimes as powerful an inspirer as genius.",
-                          "author": "Disraeli"
-                        },
-                        "children": [
-                          {
-                            "name": "Suffering",
-                            "sprichwort": {
-                              "text": "Suffering is optional, but pain is inevitable.",
-                              "author": "Buddhist Proverb"
-                            }
-                          },
-                          {
-                            "name": "Lustless",
-                            "sprichwort": {
-                              "text": "Lack of desire is the root of all stagnation.",
-                              "author": "Unknown"
+                                "text": "Those who are happy feel. Those who are unhappy think.",
+                                "author": "Blanck"
                             },
                             "children": [
-                              {
-                                "name": "Unmotivated",
-                                "sprichwort": {
-                                  "text": "Motivation is what gets you started; habit is what keeps you going.",
-                                  "author": "Rohn"
-                                }
-                              },
-                              {
-                                "name": "Powerless",
-                                "sprichwort": {
-                                  "text": "Powerlessness is the absence of hope.",
-                                  "author": "Unknown"
-                                }
-                              },
-                              {
-                                "name": "Depressed",
-                                "sprichwort": {
-                                  "text": "Depression is the inability to construct a future.",
-                                  "author": "May"
-                                },
-                                "children": [
-                                  {
-                                    "name": "Empty",
+                                {
+                                    "id": 4,
+                                    "name": "Satisfied",
                                     "sprichwort": {
-                                      "text": "An empty heart is a heavy burden.",
-                                      "author": "Unknown"
-                                    }
-                                  },
-                                  {
-                                    "name": "Inferior",
-                                    "sprichwort": {
-                                      "text": "No one can make you feel inferior without your consent.",
-                                      "author": "Roosevelt"
-                                    }
-                                  },
-                                  {
-                                    "name": "Lonely",
-                                    "sprichwort": {
-                                      "text": "Loneliness is the poverty of self; solitude is the richness of self.",
-                                      "author": "May"
+                                        "text": "It would be easier to make everyone rich than to make everyone satisfied.",
+                                        "author": "Wertheimer"
                                     },
                                     "children": [
-                                      {
-                                        "name": "Isolated",
-                                        "sprichwort": {
-                                          "text": "Isolation is the sum total of wretchedness to a man.",
-                                          "author": "Carlyle"
+                                        {
+                                            "id": 5,
+                                            "name": "Free",
+                                            "sprichwort": {
+                                                "text": "Freedom is worth nothing if it does not include the right to make mistakes.",
+                                                "author": "Gandhi"
+                                            }
+                                        },
+                                        {
+                                            "id": 6,
+                                            "name": "Cheerful",
+                                            "sprichwort": {
+                                                "text": "A cheerful person is like sunshine in the house.",
+                                                "author": "Unknown"
+                                            }
                                         }
-                                      },
-                                      {
-                                        "name": "Abandoned",
-                                        "sprichwort": {
-                                          "text": "Abandonment is the cruelest form of rejection.",
-                                          "author": "Unknown"
-                                        }
-                                      }
                                     ]
-                                  }
-                                ]
-                              }
+                                },
+                                {
+                                    "id": 7,
+                                    "name": "Playful",
+                                    "sprichwort": {
+                                        "text": "People don't stop playing because they grow old; they grow old because they stop playing!",
+                                        "author": "Holmes"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 8,
+                                            "name": "Excited",
+                                            "sprichwort": {
+                                                "text": "Our feelings are always aroused before our intellect.",
+                                                "author": "Wilde"
+                                            }
+                                        },
+                                        {
+                                            "id": 9,
+                                            "name": "Brazen",
+                                            "sprichwort": {
+                                                "text": "Foolishness protects against shame, just as brazenness protects against poverty.",
+                                                "author": "Da Vinci"
+                                            }
+                                        },
+                                        {
+                                            "id": 10,
+                                            "name": "Sassy",
+                                            "sprichwort": {
+                                                "text": "Don't let them get you down, be cheeky, wild, and wonderful!",
+                                                "author": "Lindgren"
+                                            }
+                                        }
+                                    ]
+                                }
                             ]
-                          }
-                        ]
-                      }
+                        },
+                        {
+                            "id": 11,
+                            "name": "Self-confident",
+                            "sprichwort": {
+                                "text": "Self-confidence is the first step to success.",
+                                "author": "Emerson"
+                            },
+                            "children": [
+                                {
+                                    "id": 12,
+                                    "name": "Accepted",
+                                    "sprichwort": {
+                                        "text": "As soon as we accept our limits, we go beyond them.",
+                                        "author": "Einstein"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 13,
+                                            "name": "Respected",
+                                            "sprichwort": {
+                                                "text": "Respect yourself, and others will respect you.",
+                                                "author": "Confucius"
+                                            }
+                                        },
+                                        {
+                                            "id": 14,
+                                            "name": "Trusting",
+                                            "sprichwort": {
+                                                "text": "Trust is an oasis of the heart that the caravan of thought will never reach.",
+                                                "author": "Gibran"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 15,
+                                    "name": "Proud",
+                                    "sprichwort": {
+                                        "text": "Vanity feeds on the praise of others; pride is self-sufficient.",
+                                        "author": "Kunad"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 16,
+                                            "name": "Self-assured",
+                                            "sprichwort": {
+                                                "text": "It doesn't matter where you live if you are at home within yourself.",
+                                                "author": "Schippers"
+                                            }
+                                        },
+                                        {
+                                            "id": 17,
+                                            "name": "Successful",
+                                            "sprichwort": {
+                                                "text": "Success is the ability to go from one failure to another without losing enthusiasm.",
+                                                "author": "Churchill"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 18,
+                                    "name": "Powerful",
+                                    "sprichwort": {
+                                        "text": "The abuse of greatness is when it separates power from conscience.",
+                                        "author": "Shakespeare"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 19,
+                                            "name": "Strong",
+                                            "sprichwort": {
+                                                "text": "He who conquers others has strength. He who conquers himself is strong.",
+                                                "author": "Lao Tzu"
+                                            }
+                                        },
+                                        {
+                                            "id": 20,
+                                            "name": "Brave",
+                                            "sprichwort": {
+                                                "text": "Courage is the magic that turns dreams into reality.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 21,
+                                            "name": "Creative",
+                                            "sprichwort": {
+                                                "text": "Every child is an artist. The problem is how to remain an artist once we grow up.",
+                                                "author": "Picasso"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 22,
+                            "name": "Interested",
+                            "sprichwort": {
+                                "text": "Knowing what interests you is the prerequisite for getting others interested in it.",
+                                "author": "Pater"
+                            },
+                            "children": [
+                                {
+                                    "id": 23,
+                                    "name": "Curious",
+                                    "sprichwort": {
+                                        "text": "Curiosity is the best teacher.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 24,
+                                    "name": "Inquisitive",
+                                    "sprichwort": {
+                                        "text": "Any foolish boy can crush a beetle. But all the professors in the world cannot create one.",
+                                        "author": "Schopenhauer"
+                                    }
+                                },
+                                {
+                                    "id": 25,
+                                    "name": "Questioning",
+                                    "sprichwort": {
+                                        "text": "You can tell whether a man is clever by his answers. You can tell whether a man is wise by his questions.",
+                                        "author": "Mahfouz"
+                                    }
+                                }
+                            ]
+                        }
                     ]
-                  },
-                  {
-                    "name": "Vulnerable",
+                },
+                {
+                    "id": 26,
+                    "name": "Surprise",
                     "sprichwort": {
-                      "text": "Vulnerability is the birthplace of innovation, creativity, and change.",
-                      "author": "Brown"
+                        "text": "Sometimes a victory surprises no one more than the victor himself.",
+                        "author": "Weiss"
                     },
                     "children": [
-                      {
-                        "name": "Bullied",
-                        "sprichwort": {
-                          "text": "Bullying builds character like nuclear waste creates superheroes.",
-                          "author": "Unknown"
+                        {
+                            "id": 27,
+                            "name": "Excited",
+                            "sprichwort": {
+                                "text": "Eat only when hungry and drink only when thirsty, and in excitement, better throw the food away.",
+                                "author": "Talmud"
+                            }
+                        },
+                        {
+                            "id": 28,
+                            "name": "Astonished",
+                            "sprichwort": {
+                                "text": "Those who walk through life with open eyes and ears always find reasons to be astonished.",
+                                "author": "Ferstl"
+                            }
                         }
-                      },
-                      {
-                        "name": "Fragile",
-                        "sprichwort": {
-                          "text": "Fragility is the price of beauty.",
-                          "author": "Unknown"
-                        }
-                      }
                     ]
-                  },
-                  {
-                    "name": "Guilty",
+                },
+                {
+                    "id": 29,
+                    "name": "Connectedness",
                     "sprichwort": {
-                      "text": "Guilt is the price we pay willingly for doing what we are going to do anyway.",
-                      "author": "Unknown"
+                        "text": "Love is the only force capable of transforming an enemy into a friend.",
+                        "author": "King"
                     },
                     "children": [
-                      {
-                        "name": "Ashamed",
-                        "sprichwort": {
-                          "text": "Shame corrodes the very part of us that believes we are capable of change.",
-                          "author": "Brown"
+                        {
+                            "id": 30,
+                            "name": "Optimism",
+                            "sprichwort": {
+                                "text": "The optimist is no less often wrong than the pessimist, but he lives more cheerfully.",
+                                "author": "Rivel"
+                            },
+                            "children": [
+                                {
+                                    "id": 31,
+                                    "name": "Hopeful",
+                                    "sprichwort": {
+                                        "text": "Hope is the rainbow over the cascading stream of life.",
+                                        "author": "Nietzsche"
+                                    }
+                                },
+                                {
+                                    "id": 32,
+                                    "name": "Inspired",
+                                    "sprichwort": {
+                                        "text": "I have no education. I have inspiration. If I were educated, I would be a damn fool.",
+                                        "author": "Marley"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": 33,
+                            "name": "Trust",
+                            "sprichwort": {
+                                "text": "I stand in the belief that it is sometimes not useless to place a certain noble trust in one's own abilities.",
+                                "author": "Kant"
+                            },
+                            "children": [
+                                {
+                                    "id": 34,
+                                    "name": "Intimate",
+                                    "sprichwort": {
+                                        "text": "Our intimacy rested securely on the awareness of numerous inner commonalities.",
+                                        "author": "Freud"
+                                    }
+                                },
+                                {
+                                    "id": 35,
+                                    "name": "Sensitive",
+                                    "sprichwort": {
+                                        "text": "We are guided by our compassion, and the extent of our compassion is determined by our sensitivity.",
+                                        "author": "Hazlitt"
+                                    }
+                                },
+                                {
+                                    "id": 36,
+                                    "name": "Empathetic",
+                                    "sprichwort": {
+                                        "text": "Everyone sees what you seem. Only a few feel what you are.",
+                                        "author": "Machiavelli"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": 37,
+                            "name": "Peace",
+                            "sprichwort": {
+                                "text": "There is no way to peace, for peace is the way.",
+                                "author": "Gandhi"
+                            },
+                            "children": [
+                                {
+                                    "id": 38,
+                                    "name": "Grateful",
+                                    "sprichwort": {
+                                        "text": "Gratitude is not only the greatest of all virtues but also the mother of all others.",
+                                        "author": "Cicero"
+                                    }
+                                },
+                                {
+                                    "id": 39,
+                                    "name": "Loving",
+                                    "sprichwort": {
+                                        "text": "Love does not make blind. The lover simply sees far more than is there.",
+                                        "author": "Hassencamp"
+                                    }
+                                }
+                            ]
                         }
-                      },
-                      {
-                        "name": "Contrite",
-                        "sprichwort": {
-                          "text": "True contrition is not just regret for the consequences, but regret for the act itself.",
-                          "author": "Unknown"
-                        }
-                      }
                     ]
-                  }
-                ]
-              },
-              {
-                "name": "Bored",
-                "sprichwort": {
-                  "text": "Boredom is the root of all evil—the despairing refusal to be oneself.",
-                  "author": "Kierkegaard"
-                },
-                "children": [
-                  {
-                    "name": "Indifferent",
-                    "sprichwort": {
-                      "text": "Indifference is the strongest force in the universe. It makes everything it touches meaningless.",
-                      "author": "Ellison"
-                    }
-                  },
-                  {
-                    "name": "Apathetic",
-                    "sprichwort": {
-                      "text": "Apathy is the glove into which evil slips its hand.",
-                      "author": "Buechner"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "Tired",
-                "sprichwort": {
-                  "text": "Fatigue makes cowards of us all.",
-                  "author": "Lombardi"
-                },
-                "children": [
-                  {
-                    "name": "Sleepy",
-                    "sprichwort": {
-                      "text": "A good laugh and a long sleep are the best cures in the doctor’s book.",
-                      "author": "Irish Proverb"
-                    }
-                  },
-                  {
-                    "name": "Unfocused",
-                    "sprichwort": {
-                      "text": "Lack of focus is the enemy of progress.",
-                      "author": "Unknown"
-                    }
-                  }
-                ]
-              }
+                }
             ]
-          },
-          {
-            "name": "Restless",
+        },
+        {
+            "id": 40,
+            "name": "Negative",
             "sprichwort": {
-              "text": "Restlessness is discontent—and discontent is the first necessity of progress.",
-              "author": "Edison"
+                "text": "The only real enemies of a person are their own negative thoughts.",
+                "author": "Einstein"
             },
             "children": [
-              {
-                "name": "Stressed",
-                "sprichwort": {
-                  "text": "Stress is caused by being ‘here’ but wanting to be ‘there.’",
-                  "author": "Tolle"
+                {
+                    "id": 41,
+                    "name": "Angry",
+                    "sprichwort": {
+                        "text": "Do not do anything when angry before reciting the alphabet.",
+                        "author": "Voltaire"
+                    },
+                    "children": [
+                        {
+                            "id": 42,
+                            "name": "Furious",
+                            "sprichwort": {
+                                "text": "To be furious is to avenge the faults of others on ourselves.",
+                                "author": "Pope"
+                            },
+                            "children": [
+                                {
+                                    "id": 43,
+                                    "name": "Agitated",
+                                    "sprichwort": {
+                                        "text": "I stand speechless before the courage simple people muster in the face of pain and suffering.",
+                                        "author": "Bosmans"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 44,
+                                            "name": "Annoyed",
+                                            "sprichwort": {
+                                                "text": "People are like clouds; they pass by and bring rain or sunshine.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 45,
+                                            "name": "Bitter",
+                                            "sprichwort": {
+                                                "text": "In every happiness, there is a drop of bitterness.",
+                                                "author": "Knittel"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 46,
+                                                    "name": "Envious",
+                                                    "sprichwort": {
+                                                        "text": "Freedom from envy is the genius of those who have no reason to envy anyone.",
+                                                        "author": "Altenberg"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 47,
+                                                    "name": "Outraged",
+                                                    "sprichwort": {
+                                                        "text": "Every outrage has its comic side.",
+                                                        "author": "Camus"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 48,
+                                                    "name": "Indignant",
+                                                    "sprichwort": {
+                                                        "text": "I am indignant mostly about what does not bother anyone else.",
+                                                        "author": "Jung"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 49,
+                                    "name": "Rebellious",
+                                    "sprichwort": {
+                                        "text": "Rebellion is a knot of the heart, not of the mind.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 50,
+                                    "name": "Disapproving",
+                                    "sprichwort": {
+                                        "text": "We are rich only through what we give, and poor only through what we refuse.",
+                                        "author": "Emerson"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 51,
+                                            "name": "Aggressive",
+                                            "sprichwort": {
+                                                "text": "Attack can be the best defense, but aggression is the worst defense.",
+                                                "author": "Schützbach"
+                                            }
+                                        },
+                                        {
+                                            "id": 52,
+                                            "name": "Provocative",
+                                            "sprichwort": {
+                                                "text": "An artist who does not provoke becomes invisible. Art that does not evoke strong reactions has no value.",
+                                                "author": "Dali"
+                                            }
+                                        },
+                                        {
+                                            "id": 53,
+                                            "name": "Hostile",
+                                            "sprichwort": {
+                                                "text": "Always forgive your enemies; nothing annoys them so much.",
+                                                "author": "Wilde"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 54,
+                            "name": "Humiliated",
+                            "sprichwort": {
+                                "text": "We rarely console ourselves over great humiliations—we forget them.",
+                                "author": "Clapiers"
+                            },
+                            "children": [
+                                {
+                                    "id": 55,
+                                    "name": "Mocked",
+                                    "sprichwort": {
+                                        "text": "Crowned today, mocked tomorrow.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 56,
+                                    "name": "Disrespected",
+                                    "sprichwort": {
+                                        "text": "Disrespect prevents love from growing.",
+                                        "author": "Ou-Chad"
+                                    }
+                                },
+                                {
+                                    "id": 57,
+                                    "name": "Abandoned",
+                                    "sprichwort": {
+                                        "text": "Loneliness makes us harder on ourselves and more longing for people; in both, it improves character.",
+                                        "author": "Nietzsche"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 58,
+                                            "name": "Drenched",
+                                            "sprichwort": {
+                                                "text": "When one loves, one does not long remember the offense.",
+                                                "author": "Dostoevsky"
+                                            }
+                                        },
+                                        {
+                                            "id": 59,
+                                            "name": "Cheated",
+                                            "sprichwort": {
+                                                "text": "Who has betrayed you more often than yourself?",
+                                                "author": "Franklin"
+                                            }
+                                        },
+                                        {
+                                            "id": 60,
+                                            "name": "Betrayed",
+                                            "sprichwort": {
+                                                "text": "Without betrayal, loyalty would go unnoticed.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 61,
+                            "name": "Absent",
+                            "sprichwort": {
+                                "text": "Absence sharpens love, presence strengthens it.",
+                                "author": "Thomas Fuller"
+                            },
+                            "children": [
+                                {
+                                    "id": 62,
+                                    "name": "Cool",
+                                    "sprichwort": {
+                                        "text": "Coolness is the art of appearing calm when you are not.",
+                                        "author": "Unknown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 63,
+                                            "name": "Withdrawn",
+                                            "sprichwort": {
+                                                "text": "Sometimes, silence is the loudest cry.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 64,
+                                            "name": "Reserved",
+                                            "sprichwort": {
+                                                "text": "A reserved person is like a closed book; you need patience to read it.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 65,
+                                    "name": "Dazed",
+                                    "sprichwort": {
+                                        "text": "To be dazed is to be caught between reality and dreams.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 66,
+                                    "name": "Numb",
+                                    "sprichwort": {
+                                        "text": "Numbness is the body's way of protecting the heart.",
+                                        "author": "Unknown"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 },
-                "children": [
-                  {
-                    "name": "Overwhelmed",
+                {
+                    "id": 67,
+                    "name": "Weak",
                     "sprichwort": {
-                      "text": "Overwhelm is the mind’s way of telling you to slow down.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Out of control",
-                    "sprichwort": {
-                      "text": "Control your emotions, or they will control you.",
-                      "author": "Unknown"
-                    }
-                  },
-                  {
-                    "name": "Tense",
-                    "sprichwort": {
-                      "text": "Tension is who you think you should be. Relaxation is who you are.",
-                      "author": "Chinese Proverb"
+                        "text": "Weakness of attitude becomes weakness of character.",
+                        "author": "Einstein"
                     },
                     "children": [
-                      {
-                        "name": "Hectic",
-                        "sprichwort": {
-                          "text": "Hectic days are the price of ambition.",
-                          "author": "Unknown"
+                        {
+                            "id": 68,
+                            "name": "Sad",
+                            "sprichwort": {
+                                "text": "Sadness flies away on the wings of time.",
+                                "author": "La Fontaine"
+                            },
+                            "children": [
+                                {
+                                    "id": 69,
+                                    "name": "Frustrated",
+                                    "sprichwort": {
+                                        "text": "Frustration is the gap between expectation and reality.",
+                                        "author": "Unknown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 70,
+                                            "name": "Offended",
+                                            "sprichwort": {
+                                                "text": "An offended heart is the breeding ground for resentment.",
+                                                "author": "Unknown"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 71,
+                                                    "name": "Embarrassed",
+                                                    "sprichwort": {
+                                                        "text": "Embarrassment is the price of admission to the human experience.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 72,
+                                                    "name": "Disappointed",
+                                                    "sprichwort": {
+                                                        "text": "Disappointment is a sort of bankruptcy—the bankruptcy of a soul that expends too much in hope and expectation.",
+                                                        "author": "Unknown"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 73,
+                                            "name": "Desperate",
+                                            "sprichwort": {
+                                                "text": "Desperation is sometimes as powerful an inspirer as genius.",
+                                                "author": "Disraeli"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 74,
+                                                    "name": "Suffering",
+                                                    "sprichwort": {
+                                                        "text": "Suffering is optional, but pain is inevitable.",
+                                                        "author": "Buddhist Proverb"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 75,
+                                                    "name": "Lustless",
+                                                    "sprichwort": {
+                                                        "text": "Lack of desire is the root of all stagnation.",
+                                                        "author": "Unknown"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "id": 76,
+                                                            "name": "Unmotivated",
+                                                            "sprichwort": {
+                                                                "text": "Motivation is what gets you started; habit is what keeps you going.",
+                                                                "author": "Rohn"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": 77,
+                                                            "name": "Powerless",
+                                                            "sprichwort": {
+                                                                "text": "Powerlessness is the absence of hope.",
+                                                                "author": "Unknown"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": 78,
+                                                            "name": "Depressed",
+                                                            "sprichwort": {
+                                                                "text": "Depression is the inability to construct a future.",
+                                                                "author": "May"
+                                                            },
+                                                            "children": [
+                                                                {
+                                                                    "id": 79,
+                                                                    "name": "Empty",
+                                                                    "sprichwort": {
+                                                                        "text": "An empty heart is a heavy burden.",
+                                                                        "author": "Unknown"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": 80,
+                                                                    "name": "Inferior",
+                                                                    "sprichwort": {
+                                                                        "text": "No one can make you feel inferior without your consent.",
+                                                                        "author": "Roosevelt"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": 81,
+                                                                    "name": "Lonely",
+                                                                    "sprichwort": {
+                                                                        "text": "Loneliness is the poverty of self; solitude is the richness of self.",
+                                                                        "author": "May"
+                                                                    },
+                                                                    "children": [
+                                                                        {
+                                                                            "id": 82,
+                                                                            "name": "Isolated",
+                                                                            "sprichwort": {
+                                                                                "text": "Isolation is the sum total of wretchedness to a man.",
+                                                                                "author": "Carlyle"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "id": 83,
+                                                                            "name": "Abandoned",
+                                                                            "sprichwort": {
+                                                                                "text": "Abandonment is the cruelest form of rejection.",
+                                                                                "author": "Unknown"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 84,
+                                    "name": "Vulnerable",
+                                    "sprichwort": {
+                                        "text": "Vulnerability is the birthplace of innovation, creativity, and change.",
+                                        "author": "Brown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 85,
+                                            "name": "Bullied",
+                                            "sprichwort": {
+                                                "text": "Bullying builds character like nuclear waste creates superheroes.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 86,
+                                            "name": "Fragile",
+                                            "sprichwort": {
+                                                "text": "Fragility is the price of beauty.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 87,
+                                    "name": "Guilty",
+                                    "sprichwort": {
+                                        "text": "Guilt is the price we pay willingly for doing what we are going to do anyway.",
+                                        "author": "Unknown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 88,
+                                            "name": "Ashamed",
+                                            "sprichwort": {
+                                                "text": "Shame corrodes the very part of us that believes we are capable of change.",
+                                                "author": "Brown"
+                                            }
+                                        },
+                                        {
+                                            "id": 89,
+                                            "name": "Contrite",
+                                            "sprichwort": {
+                                                "text": "True contrition is not just regret for the consequences, but regret for the act itself.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 90,
+                            "name": "Bored",
+                            "sprichwort": {
+                                "text": "Boredom is the root of all evil—the despairing refusal to be oneself.",
+                                "author": "Kierkegaard"
+                            },
+                            "children": [
+                                {
+                                    "id": 91,
+                                    "name": "Indifferent",
+                                    "sprichwort": {
+                                        "text": "Indifference is the strongest force in the universe. It makes everything it touches meaningless.",
+                                        "author": "Ellison"
+                                    }
+                                },
+                                {
+                                    "id": 92,
+                                    "name": "Apathetic",
+                                    "sprichwort": {
+                                        "text": "Apathy is the glove into which evil slips its hand.",
+                                        "author": "Buechner"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": 93,
+                            "name": "Tired",
+                            "sprichwort": {
+                                "text": "Fatigue makes cowards of us all.",
+                                "author": "Lombardi"
+                            },
+                            "children": [
+                                {
+                                    "id": 94,
+                                    "name": "Sleepy",
+                                    "sprichwort": {
+                                        "text": "A good laugh and a long sleep are the best cures in the doctor’s book.",
+                                        "author": "Irish Proverb"
+                                    }
+                                },
+                                {
+                                    "id": 95,
+                                    "name": "Unfocused",
+                                    "sprichwort": {
+                                        "text": "Lack of focus is the enemy of progress.",
+                                        "author": "Unknown"
+                                    }
+                                }
+                            ]
                         }
-                      },
-                      {
-                        "name": "Suppressed",
-                        "sprichwort": {
-                          "text": "Suppression of emotions leads to inner turmoil.",
-                          "author": "Unknown"
-                        }
-                      }
                     ]
-                  }
-                ]
-              },
-              {
-                "name": "Worried",
-                "sprichwort": {
-                  "text": "Worry does not empty tomorrow of its sorrow; it empties today of its strength.",
-                  "author": "Ten Boom"
                 },
-                "children": [
-                  {
-                    "name": "Anxious",
+                {
+                    "id": 96,
+                    "name": "Restless",
                     "sprichwort": {
-                      "text": "Anxiety is the dizziness of freedom.",
-                      "author": "Kierkegaard"
+                        "text": "Restlessness is discontent—and discontent is the first necessity of progress.",
+                        "author": "Edison"
                     },
                     "children": [
-                      {
-                        "name": "Surprised",
-                        "sprichwort": {
-                          "text": "Surprise is the greatest gift life can grant us.",
-                          "author": "Borges"
+                        {
+                            "id": 97,
+                            "name": "Stressed",
+                            "sprichwort": {
+                                "text": "Stress is caused by being ‘here’ but wanting to be ‘there.’",
+                                "author": "Tolle"
+                            },
+                            "children": [
+                                {
+                                    "id": 98,
+                                    "name": "Overwhelmed",
+                                    "sprichwort": {
+                                        "text": "Overwhelm is the mind’s way of telling you to slow down.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 99,
+                                    "name": "Out of control",
+                                    "sprichwort": {
+                                        "text": "Control your emotions, or they will control you.",
+                                        "author": "Unknown"
+                                    }
+                                },
+                                {
+                                    "id": 100,
+                                    "name": "Tense",
+                                    "sprichwort": {
+                                        "text": "Tension is who you think you should be. Relaxation is who you are.",
+                                        "author": "Chinese Proverb"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 101,
+                                            "name": "Hectic",
+                                            "sprichwort": {
+                                                "text": "Hectic days are the price of ambition.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 102,
+                                            "name": "Suppressed",
+                                            "sprichwort": {
+                                                "text": "Suppression of emotions leads to inner turmoil.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         },
-                        "children": [
-                          {
-                            "name": "Startled",
+                        {
+                            "id": 103,
+                            "name": "Worried",
                             "sprichwort": {
-                              "text": "Startle not the mind with sudden fears.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Horrified",
-                            "sprichwort": {
-                              "text": "Horror is the natural reaction to the unknown.",
-                              "author": "Lovecraft"
-                            }
-                          },
-                          {
-                            "name": "Irritated",
-                            "sprichwort": {
-                              "text": "Irritation is the seed of anger.",
-                              "author": "Unknown"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Threatened",
-                        "sprichwort": {
-                          "text": "Feeling threatened is a sign of insecurity.",
-                          "author": "Unknown"
-                        },
-                        "children": [
-                          {
-                            "name": "Nervous",
-                            "sprichwort": {
-                              "text": "Nervousness is the price of preparation.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Exposed",
-                            "sprichwort": {
-                              "text": "To be exposed is to be vulnerable, and to be vulnerable is to be alive.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Excluded",
-                            "sprichwort": {
-                              "text": "Exclusion is the silent killer of belonging.",
-                              "author": "Unknown"
-                            }
-                          }
-                        ]
-                      }
+                                "text": "Worry does not empty tomorrow of its sorrow; it empties today of its strength.",
+                                "author": "Ten Boom"
+                            },
+                            "children": [
+                                {
+                                    "id": 104,
+                                    "name": "Anxious",
+                                    "sprichwort": {
+                                        "text": "Anxiety is the dizziness of freedom.",
+                                        "author": "Kierkegaard"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 105,
+                                            "name": "Surprised",
+                                            "sprichwort": {
+                                                "text": "Surprise is the greatest gift life can grant us.",
+                                                "author": "Borges"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 106,
+                                                    "name": "Startled",
+                                                    "sprichwort": {
+                                                        "text": "Startle not the mind with sudden fears.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 107,
+                                                    "name": "Horrified",
+                                                    "sprichwort": {
+                                                        "text": "Horror is the natural reaction to the unknown.",
+                                                        "author": "Lovecraft"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 108,
+                                                    "name": "Irritated",
+                                                    "sprichwort": {
+                                                        "text": "Irritation is the seed of anger.",
+                                                        "author": "Unknown"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 109,
+                                            "name": "Threatened",
+                                            "sprichwort": {
+                                                "text": "Feeling threatened is a sign of insecurity.",
+                                                "author": "Unknown"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 110,
+                                                    "name": "Nervous",
+                                                    "sprichwort": {
+                                                        "text": "Nervousness is the price of preparation.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 111,
+                                                    "name": "Exposed",
+                                                    "sprichwort": {
+                                                        "text": "To be exposed is to be vulnerable, and to be vulnerable is to be alive.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 112,
+                                                    "name": "Excluded",
+                                                    "sprichwort": {
+                                                        "text": "Exclusion is the silent killer of belonging.",
+                                                        "author": "Unknown"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 113,
+                                    "name": "Insecure",
+                                    "sprichwort": {
+                                        "text": "Insecurity is the root of all fear.",
+                                        "author": "Unknown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 114,
+                                            "name": "Helpless",
+                                            "sprichwort": {
+                                                "text": "Helplessness is the first step toward asking for help.",
+                                                "author": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "id": 115,
+                                            "name": "Inconsequential",
+                                            "sprichwort": {
+                                                "text": "No act of kindness, no matter how small, is inconsequential.",
+                                                "author": "Aesop"
+                                            }
+                                        },
+                                        {
+                                            "id": 116,
+                                            "name": "Insufficient",
+                                            "sprichwort": {
+                                                "text": "Feeling insufficient is the first step toward growth.",
+                                                "author": "Unknown"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 117,
+                                    "name": "Disgusted",
+                                    "sprichwort": {
+                                        "text": "Disgust is the guardian of our boundaries.",
+                                        "author": "Unknown"
+                                    },
+                                    "children": [
+                                        {
+                                            "id": 118,
+                                            "name": "Prejudiced",
+                                            "sprichwort": {
+                                                "text": "Prejudice is the child of ignorance.",
+                                                "author": "Hazlitt"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 119,
+                                                    "name": "Disapproving",
+                                                    "sprichwort": {
+                                                        "text": "Disapproval is the shadow of judgment.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 120,
+                                                    "name": "Hesitant",
+                                                    "sprichwort": {
+                                                        "text": "Hesitation is the seed of missed opportunities.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 121,
+                                                    "name": "Dismissive",
+                                                    "sprichwort": {
+                                                        "text": "Dismissiveness is the armor of the insecure.",
+                                                        "author": "Unknown"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 122,
+                                            "name": "Disappointed",
+                                            "sprichwort": {
+                                                "text": "Disappointment is the nurse of wisdom.",
+                                                "author": "Bayly"
+                                            },
+                                            "children": [
+                                                {
+                                                    "id": 123,
+                                                    "name": "Appalled",
+                                                    "sprichwort": {
+                                                        "text": "To be appalled is to be awakened to injustice.",
+                                                        "author": "Unknown"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 124,
+                                                    "name": "Rebuffed",
+                                                    "sprichwort": {
+                                                        "text": "Rebuffs are the stepping stones to resilience.",
+                                                        "author": "Unknown"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 125,
+                                            "name": "Hateful",
+                                            "sprichwort": {
+                                                "text": "Hatred is the coward's revenge for being intimidated.",
+                                                "author": "Shaw"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     ]
-                  },
-                  {
-                    "name": "Insecure",
-                    "sprichwort": {
-                      "text": "Insecurity is the root of all fear.",
-                      "author": "Unknown"
-                    },
-                    "children": [
-                      {
-                        "name": "Helpless",
-                        "sprichwort": {
-                          "text": "Helplessness is the first step toward asking for help.",
-                          "author": "Unknown"
-                        }
-                      },
-                      {
-                        "name": "Inconsequential",
-                        "sprichwort": {
-                          "text": "No act of kindness, no matter how small, is inconsequential.",
-                          "author": "Aesop"
-                        }
-                      },
-                      {
-                        "name": "Insufficient",
-                        "sprichwort": {
-                          "text": "Feeling insufficient is the first step toward growth.",
-                          "author": "Unknown"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Disgusted",
-                    "sprichwort": {
-                      "text": "Disgust is the guardian of our boundaries.",
-                      "author": "Unknown"
-                    },
-                    "children": [
-                      {
-                        "name": "Prejudiced",
-                        "sprichwort": {
-                          "text": "Prejudice is the child of ignorance.",
-                          "author": "Hazlitt"
-                        },
-                        "children": [
-                          {
-                            "name": "Disapproving",
-                            "sprichwort": {
-                              "text": "Disapproval is the shadow of judgment.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Hesitant",
-                            "sprichwort": {
-                              "text": "Hesitation is the seed of missed opportunities.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Dismissive",
-                            "sprichwort": {
-                              "text": "Dismissiveness is the armor of the insecure.",
-                              "author": "Unknown"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Disappointed",
-                        "sprichwort": {
-                          "text": "Disappointment is the nurse of wisdom.",
-                          "author": "Bayly"
-                        },
-                        "children": [
-                          {
-                            "name": "Appalled",
-                            "sprichwort": {
-                              "text": "To be appalled is to be awakened to injustice.",
-                              "author": "Unknown"
-                            }
-                          },
-                          {
-                            "name": "Rebuffed",
-                            "sprichwort": {
-                              "text": "Rebuffs are the stepping stones to resilience.",
-                              "author": "Unknown"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Hateful",
-                        "sprichwort": {
-                          "text": "Hatred is the coward's revenge for being intimidated.",
-                          "author": "Shaw"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
+                }
             ]
-          }
-        ]
-      }      
+        }
     ]
-  }
+}

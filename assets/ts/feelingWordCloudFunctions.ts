@@ -1,8 +1,14 @@
 import { Word } from "rn-wordcloud";
+import { getFeelingById } from "./helper";
 
-export const refactorFeelingIntoWord = (storedFeelingArray:ISingleStoreFeeling[],wordCloudColors:string[]):Word[]=>{
-    const textKey:keyof Word = "text";
-    const valueKey:keyof Word = "value";
-    const colorKey:keyof Word = "color";
-    return storedFeelingArray.map((feeling, index) => { return { [textKey]: feeling.name, [valueKey]: feeling.count, [colorKey]: wordCloudColors[index % wordCloudColors.length] } });
+export const refactorFeelingIntoWord = (storedFeelingArray:ISingleStoreFeeling[],wordCloudColors:string[], allFeelings:INestedFeelings):Word[]=>{
+    const feelingIntoWord = (feeling:ISingleStoreFeeling, index:number):Word => {
+        let feelingName = getFeelingById(feeling.feelingId,allFeelings);
+        return {
+            text: feelingName != null?feelingName:"",
+            value: feeling.count,
+            color: wordCloudColors[index % wordCloudColors.length]
+        }
+    }
+    return storedFeelingArray.map((feeling, index) => feelingIntoWord(feeling, index));
   }

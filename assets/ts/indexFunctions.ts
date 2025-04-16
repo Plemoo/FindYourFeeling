@@ -76,15 +76,3 @@ function findPathForNameInFeelings (obj: INestedFeelings[]|INestedFeelings, pred
     }
     return null; // Wert nicht gefunden
 };
-
-      // const findPath = (obj: any, predicate: (value: any) => boolean, path: string[] = []): string[] | null => {
-      //   for (const key in obj) {
-      //     const newPath = [...path, key]; // Aktuellen Pfad erweitern
-      //     if (predicate(obj[key])) return newPath; // Wert gefunden → Pfad zurückgeben
-      //     if (_.isObject(obj[key])) {
-      //       const deepPath = findPath(obj[key], predicate, newPath);
-      //       if (deepPath) return deepPath; // Falls in der Tiefe gefunden → Pfad zurückgeben
-      //     }
-      //   }
-      //   return null; // Wert nicht gefunden
-      // };

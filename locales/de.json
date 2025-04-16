@@ -1,13 +1,14 @@
 {
-    "welcome": "Willkommen in der App!",
     "language": "Sprache",
     "feelingsButton":"Klicke auf dein Gefühl",
     "selectableFeelingButton":"Ich fühle (mich) {{feeling}}",
     "back":"Zurück",
-    "IndexPage":"Willkommen in der App!",
+    "IndexPage":"Finde dein Gefühl!",
     "FeelingsTrackerPage":"Gefühlstracker",
     "languageSelection":"Sprache auswählen",
-    "overviewPage":"Übersicht",
-    "feelingPage":"Mein Gefühl"
+    "overviewPage":"Gefühlswolke",
+    "feelingPage":"Mein Gefühl",
+    "resetWordCloud":"Gefühle zurücksetzen",
+    "wordCloudClickHint":"Klicke auf die dargestellten Gefühle um deren Relevanz zu sehen oder ändern."
   }
   

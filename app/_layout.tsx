@@ -46,7 +46,7 @@ const RootLayout = () => {
                     return <TouchableHighlight onPressIn={switchScreens}><SwitchScreenIcon currentRoute={segment}/></TouchableHighlight>
                 }
             }}>
-                <Stack.Screen name="index" options={{ title: t("IndexPage") }} />
+                <Stack.Screen name="index" options={{title: t("IndexPage")}} />
                 <Stack.Screen name="FeelingsTracker" options={{ title: t("FeelingsTrackerPage") }} />
             </Stack>
             <LanguageSelectionModal modalVisible={modalVisible} triggerSetModalVisible={setModalVisible} />

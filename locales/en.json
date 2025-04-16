@@ -1,12 +1,14 @@
 {
-    "welcome": "Welcome to the app!",
     "language": "Language",
     "feelingsButton":"Click on how you feel",
     "selectableFeelingButton":"I feel {{feeling}}",
     "back":"Back",
     "IndexPage":"Welcome!",
-    "FeelingsTrackerPage":"Feeling Tracker",
+    "FeelingsTrackerPage":"Find your feeling!",
     "languageSelection":"Choose your language",
-    "overviewPage":"Overview",
-    "feelingPage":"My feeling"
+    "overviewPage":"Feeling Cloud",
+    "feelingPage":"My feeling",
+    "resetWordCloud":"Reset feelings",
+    "wordCloudClickHint":"Click on the shown feelings to see or change their significance."
+
   }

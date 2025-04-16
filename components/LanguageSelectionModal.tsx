@@ -25,23 +25,23 @@ const styles = StyleSheet.create({
 
 
 
-const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({modalVisible, triggerSetModalVisible}) => {
-        const { t, i18n } = useTranslation();
-        const changeLanguage = async (language: string) => {
-            await i18n.changeLanguage(language);
-            try{
-                // Save the selected language to AsyncStorage
-                if(Platform.OS === "web"){
-                    window.localStorage.setItem('language', language);
-                }else if(Platform.OS === "android" || Platform.OS === "ios"){
-                    await AsyncStorage.setItem('language', language);
-                }
-            }catch(e){
-                console.error("Error saving language to AsyncStorage:", e);
+const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({ modalVisible, triggerSetModalVisible }) => {
+    const { t, i18n } = useTranslation();
+    const changeLanguage = async (language: string) => {
+        await i18n.changeLanguage(language);
+        try {
+            // Save the selected language to AsyncStorage
+            if (Platform.OS === "web") {
+                window.localStorage.setItem('language', language);
+            } else if (Platform.OS === "android" || Platform.OS === "ios") {
+                await AsyncStorage.setItem('language', language);
             }
-            // Update the app's language based on the selected language
-            triggerSetModalVisible(!modalVisible);
-        };
+        } catch (e) {
+            console.error("Error saving language to AsyncStorage:", e);
+        }
+        // Update the app's language based on the selected language
+        triggerSetModalVisible(!modalVisible);
+    };
     return (
         <Modal
             transparent={true}
@@ -51,20 +51,17 @@ const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({modalVis
         >
             <View style={modalStyles.modalBackground}>
                 <View style={modalStyles.modalContainer}>
-                    <View>
-                    <Text style={modalStyles.modalTitle}>{t("languageSelection")}</Text>
-                     {/* Back Icon Button */}
                     <TouchableOpacity style={modalStyles.closeButton} onPress={() => triggerSetModalVisible(!modalVisible)}>
-                        <Icon name="arrow-back" size={25} color="black" />
+                        <Icon  name="arrow-back-circle-outline" size={50} color="black" />
                     </TouchableOpacity>
-                    </View>
+                    <Text style={modalStyles.modalTitle}>{t("languageSelection")}</Text>
 
                     <View style={styles.flagContainer}>
                         <TouchableOpacity style={styles.flagButton} onPress={() => changeLanguage(LANGUAGE.english)}>
-                            <UnionJackFlag square={true}/>
+                            <UnionJackFlag square={true} />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => changeLanguage(LANGUAGE.german)}>
-                            <GermanFlag square={true}/>
+                            <GermanFlag square={true} />
                         </TouchableOpacity>
                     </View>
                 </View>

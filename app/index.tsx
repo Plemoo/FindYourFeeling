@@ -9,7 +9,7 @@ import i18next from "../assets/ts/i18next";
 import { arraysEqual, getChildFeelingsBasedOnParent, getFeelingsBasedOnLanguage, getPathOfFeeling } from "@/assets/ts/indexFunctions";
 import Sprichwort from "@/components/Sprichwort";
 import { TouchableHighlight } from "react-native";
-import { getStoredFeelingsAsync, storeFeelingInAsyncStorage } from "@/assets/ts/helper";
+import { getIdByFeeling, getStoredFeelingsAsync, storeFeelingInAsyncStorage } from "@/assets/ts/helper";
 
 
 export default function Index() {
@@ -17,8 +17,8 @@ export default function Index() {
   const [currentFeelings, setCurrentFeelings] = useState<string[]>(getChildFeelingsBasedOnParent(allFeelings.name, allFeelings));
   const [chosenFeeling, setChosenFeeling] = useState<string>(allFeelings.name);
   const [sprichwort, setSprichwort] = useState<ISprichwort>(allFeelings.sprichwort);
-  const { t } = useTranslation();
-  i18next.on('languageChanged', () => {
+  const { t, i18n } = useTranslation();
+  i18n.on('languageChanged', () => {
     // Müssen noch die Feelings in der alten Sprache sein
     let sameFeelingInOtherLanguage = getPathOfFeeling(chosenFeeling, allFeelings);
     allFeelings = getFeelingsBasedOnLanguage(i18next.language);
@@ -37,6 +37,12 @@ export default function Index() {
     }
   }, [chosenFeeling])
 
+  /**
+   * Function is called by DonutChart Component, to store the selected
+   * @param clickedFeeling 
+   * @param previouslyChosenFeeling 
+   * @returns 
+   */
   function calledByChild(clickedFeeling: string, previouslyChosenFeeling: string) {
     let sprichwortKey: keyof INestedFeelings = "sprichwort";
     let nameKey: keyof INestedFeelings = "name";
@@ -60,22 +66,24 @@ export default function Index() {
 
   const saveSelectionAndReset = () => {
     // chosenFeeling zwischenspeichern
-    let storedFeelingsKey: keyof IStoredFeelings = "storedFeelings";
     getStoredFeelingsAsync().then((value) => {
+      let idOfFeeling = getIdByFeeling(chosenFeeling,allFeelings);
+      if(_.isNil(idOfFeeling)){ // Abbruch wenn Feeling ID nicht gefrunden wurde
+        return;
+      }
       let storedFeelings: ISingleStoreFeeling[]=[];
       if (value == null) { // Wenn noch nichts gespeichert ist
-        storedFeelings.push({ name: chosenFeeling, count: 1, });
+        storedFeelings.push({ feelingId: idOfFeeling, count: 1, });
       } else { // Wenn schon etwas gespeichert ist
         storedFeelings = value.storedFeelings;
-        let feelingExists = storedFeelings.find((feeling) => feeling.name === chosenFeeling);
+        let feelingExists = storedFeelings.find((feeling) => feeling.feelingId === idOfFeeling);
         if (feelingExists) {
           feelingExists.count++;
         } else {
-          storedFeelings.push({ name: chosenFeeling, count: 1 });
+          storedFeelings.push({ feelingId: idOfFeeling, count: 1 });
         }
       }
       storeFeelingInAsyncStorage(storedFeelings);
-      // AsyncStorage.setItem(storedFeelingsKey, JSON.stringify(storedFeelings));
     });
     resetSelection();
   }

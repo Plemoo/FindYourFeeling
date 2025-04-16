@@ -1,4 +1,5 @@
 {
+    "id": 0,
     "name": "Gefühle",
     "sprichwort": {
         "text": "Spiele niemals mit jemandes Gefühlen, denn auch wenn du das Spiel gewinnst, wirst du diese Person für den Rest deines Lebens verlieren.",
@@ -6,6 +7,7 @@
     },
     "children": [
         {
+            "id": 1,
             "name": "Positiv",
             "sprichwort": {
                 "text": "Positives Denken ist schlimmstenfalls eine Nullnummer.",
@@ -13,6 +15,7 @@
             },
             "children": [
                 {
+                    "id": 2,
                     "name": "Freude",
                     "sprichwort": {
                         "text": "Geteilte Freude ist doppelte Freude.",
@@ -20,6 +23,7 @@
                     },
                     "children": [
                         {
+                            "id": 3,
                             "name": "Glücklich",
                             "sprichwort": {
                                 "text": "Wer glücklich ist, fühlt. Wer unglücklich ist, denkt.",
@@ -27,6 +31,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 4,
                                     "name": "Zufrieden",
                                     "sprichwort": {
                                         "text": "Noch eher könnte man alle reich, als alle zufrieden machen.",
@@ -34,6 +39,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 5,
                                             "name": "Frei",
                                             "sprichwort": {
                                                 "text": "Freiheit ist nichts wert, wenn sie nicht das Recht einschließt zu irren.",
@@ -41,6 +47,7 @@
                                             }
                                         },
                                         {
+                                            "id": 6,
                                             "name": "Fröhlich",
                                             "sprichwort": {
                                                 "text": "Ein fröhlicher Mensch ist wie Sonnenschein im Haus.",
@@ -50,6 +57,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 7,
                                     "name": "Verspielt",
                                     "sprichwort": {
                                         "text": "Leute hören nicht auf zu spielen, weil sie alt werden, sie werden alt, weil sie aufhören zu spielen!",
@@ -57,6 +65,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 8,
                                             "name": "Erregt",
                                             "sprichwort": {
                                                 "text": "Unsere Gefühle sind stets früher als der Verstand erregt.",
@@ -64,6 +73,7 @@
                                             }
                                         },
                                         {
+                                            "id": 9,
                                             "name": "Dreist",
                                             "sprichwort": {
                                                 "text": "Die Dummheit schützt vor Schande, gleich wie die Dreistigkeit vor Armut.",
@@ -71,6 +81,7 @@
                                             }
                                         },
                                         {
+                                            "id": 10,
                                             "name": "Frech",
                                             "sprichwort": {
                                                 "text": "Lass dich nicht unterkriegen, sei frech und wild und wunderbar!",
@@ -82,6 +93,7 @@
                             ]
                         },
                         {
+                            "id": 11,
                             "name": "Selbstbewusst",
                             "sprichwort": {
                                 "text": "Selbstbewusstsein ist der erste Schritt zum Erfolg.",
@@ -89,6 +101,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 12,
                                     "name": "Akzeptiert",
                                     "sprichwort": {
                                         "text": "Sobald wir unsere Grenzen akzeptieren, gehen wir über sie hinaus.",
@@ -96,6 +109,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 13,
                                             "name": "Respektiert",
                                             "sprichwort": {
                                                 "text": "Respektiere dich selbst und andere werden dich respektieren.",
@@ -103,6 +117,7 @@
                                             }
                                         },
                                         {
+                                            "id": 14,
                                             "name": "Vertrauensvoll",
                                             "sprichwort": {
                                                 "text": "Vertrauen ist eine Oase des Herzens, die von der Karawane des Denkens nie erreicht wird.",
@@ -112,6 +127,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 15,
                                     "name": "Stolz",
                                     "sprichwort": {
                                         "text": "Die Eitelkeit nährt sich vom Lobe anderer; der Stolz ist sich selbst genug.",
@@ -119,6 +135,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 16,
                                             "name": "Selbstsicher",
                                             "sprichwort": {
                                                 "text": "Es ist egal, an welchem Ort du lebst, wenn du in dir zuhause bist.",
@@ -126,6 +143,7 @@
                                             }
                                         },
                                         {
+                                            "id": 17,
                                             "name": "Erfolgreich",
                                             "sprichwort": {
                                                 "text": "Erfolg ist die Fähigkeit, von einem Misserfolg zum anderen zu gehen, ohne seine Begeisterung zu verlieren.",
@@ -135,6 +153,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 18,
                                     "name": "Mächtig",
                                     "sprichwort": {
                                         "text": "Der Größe Mißbrauch ist, wenn von der Macht sie das Gewissen trennt.",
@@ -142,6 +161,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 19,
                                             "name": "Stark",
                                             "sprichwort": {
                                                 "text": "Wer andere besiegt, hat Kraft. Wer sich selber besiegt, ist stark.",
@@ -149,6 +169,7 @@
                                             }
                                         },
                                         {
+                                            "id": 20,
                                             "name": "Mutig",
                                             "sprichwort": {
                                                 "text": "Mut ist der Zauber, der Träume in Wirklichkeit verwandelt.",
@@ -156,6 +177,7 @@
                                             }
                                         },
                                         {
+                                            "id": 21,
                                             "name": "Kreativ",
                                             "sprichwort": {
                                                 "text": "Als Kind ist jeder ein Künstler, die Schwierigkeit liegt darin, als Erwachsener einer zu bleiben.",
@@ -167,6 +189,7 @@
                             ]
                         },
                         {
+                            "id": 22,
                             "name": "Interessiert",
                             "sprichwort": {
                                 "text": "Zu wissen, woran man selbst interessiert ist, ist die Voraussetzung, um andere Leute dafür zu interessieren.",
@@ -174,6 +197,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 23,
                                     "name": "Neugierig",
                                     "sprichwort": {
                                         "text": "Neugier ist der beste Lehrer.",
@@ -181,6 +205,7 @@
                                     }
                                 },
                                 {
+                                    "id": 24,
                                     "name": "Forschend",
                                     "sprichwort": {
                                         "text": "Jeder dumme Junge kann einen Käfer zertreten. Aber alle Professoren der Welt können keinen herstellen.",
@@ -188,6 +213,7 @@
                                     }
                                 },
                                 {
+                                    "id": 25,
                                     "name": "Fragend",
                                     "sprichwort": {
                                         "text": "Ob ein Mensch klug ist, erkennt man an seinen Antworten. Ob ein Mensch weise ist, erkennt man an seinen Fragen.",
@@ -199,6 +225,7 @@
                     ]
                 },
                 {
+                    "id": 26,
                     "name": "Überraschung",
                     "sprichwort": {
                         "text": "Bisweilen überrascht ein Sieg niemand mehr als den Sieger selbst.",
@@ -206,6 +233,7 @@
                     },
                     "children": [
                         {
+                            "id": 27,
                             "name": "Aufgeregt",
                             "sprichwort": {
                                 "text": "Iß nur bei Hunger und trink nur bei Durst, und bei Aufregung schütte die Speisen lieber weg.",
@@ -213,6 +241,7 @@
                             }
                         },
                         {
+                            "id": 28,
                             "name": "Erstaunt",
                             "sprichwort": {
                                 "text": "Wer mit offenen Augen und Ohren durchs Leben geht, findet immer wieder Grund zum Staunen.",
@@ -222,6 +251,7 @@
                     ]
                 },
                 {
+                    "id": 29,
                     "name": "Verbundenheit",
                     "sprichwort": {
                         "text": "Die Liebe ist die einzige Kraft, die den Feind in einen Freund verwandeln kann.",
@@ -229,6 +259,7 @@
                     },
                     "children": [
                         {
+                            "id": 30,
                             "name": "Optimismus",
                             "sprichwort": {
                                 "text": "Der Optimist hat nicht weniger oft unrecht als der Pessimist, aber er lebt froher.",
@@ -236,6 +267,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 31,
                                     "name": "Hoffnungsvoll",
                                     "sprichwort": {
                                         "text": "Die Hoffnung ist der Regenbogen über den herabstürzenden Bach des Lebens.",
@@ -243,6 +275,7 @@
                                     }
                                 },
                                 {
+                                    "id": 32,
                                     "name": "Inspiriert",
                                     "sprichwort": {
                                         "text": "Ich habe keine Bildung. Ich habe Inspiration. Wenn ich gebildet wäre, wäre ich ein verdammter Narr.",
@@ -252,6 +285,7 @@
                             ]
                         },
                         {
+                            "id": 33,
                             "name": "Vertrauen",
                             "sprichwort": {
                                 "text": "Ich stehe in der Einbildung, es sei zuweilen nicht unnütz, ein gewisses edles Vertrauen in seine eigenen Kräfte zu setzen.",
@@ -259,6 +293,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 34,
                                     "name": "Intim/Innig",
                                     "sprichwort": {
                                         "text": "Unsere Intimität ruhte sicher auf dem Bewusstsein zahlreicher innerer Gemeinsamkeiten.",
@@ -266,6 +301,7 @@
                                     }
                                 },
                                 {
+                                    "id": 35,
                                     "name": "Sensibel",
                                     "sprichwort": {
                                         "text": "Wir werden von unserem Mitgefühl geleitet, und das Ausmaß unseres Mitgefühls wird durch unsere Sensibilität bestimmt.",
@@ -273,6 +309,7 @@
                                     }
                                 },
                                 {
+                                    "id": 36,
                                     "name": "Feinfühlig",
                                     "sprichwort": {
                                         "text": "Jeder sieht, was du scheinst. Nur wenige fühlen, wie du bist.",
@@ -282,6 +319,7 @@
                             ]
                         },
                         {
+                            "id": 37,
                             "name": "Frieden",
                             "sprichwort": {
                                 "text": "Es gibt keinen Weg zum Frieden, denn Frieden ist der Weg.",
@@ -289,6 +327,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 38,
                                     "name": "Dankbar",
                                     "sprichwort": {
                                         "text": "Dankbarkeit ist nicht nur die größte aller Tugenden, sondern auch die Mutter aller anderen.",
@@ -296,6 +335,7 @@
                                     }
                                 },
                                 {
+                                    "id": 39,
                                     "name": "Liebend",
                                     "sprichwort": {
                                         "text": "Liebe macht nicht blind. Der Liebende sieht nur weit mehr als da ist.",
@@ -309,6 +349,7 @@
             ]
         },
         {
+            "id": 40,
             "name": "Negativ",
             "sprichwort": {
                 "text": "Der einzigen wirklichen Feinde eines Menschen sind seine eigenen, negativen Gedanken.",
@@ -316,6 +357,7 @@
             },
             "children": [
                 {
+                    "id": 41,
                     "name": "Wütend",
                     "sprichwort": {
                         "text": "Vergiß nicht, wenn du wütend bist, nichts zu tun, bevor du dir das Alphabet aufgesagt hast.",
@@ -323,6 +365,7 @@
                     },
                     "children": [
                         {
+                            "id": 42,
                             "name": "Zornig",
                             "sprichwort": {
                                 "text": "Zornig zu sein heißt, die Fehler anderer an uns selbst zu rächen.",
@@ -330,6 +373,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 43,
                                     "name": "Aufgebracht",
                                     "sprichwort": {
                                         "text": "Ich stehe sprachlos vor dem Mut, den einfache Menschen aufbringen angesichts von Schmerz und Leid.",
@@ -337,6 +381,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 44,
                                             "name": "Genervt",
                                             "sprichwort": {
                                                 "text": "Zeige niemandem, daß deine Nerven straff gespannt wie Saiten sind, sonst findet sich jemand, der darauf spielt.",
@@ -344,6 +389,7 @@
                                             }
                                         },
                                         {
+                                            "id": 45,
                                             "name": "Verbittert",
                                             "sprichwort": {
                                                 "text": "In jedem Glück ist ein Tropfen Bitterkeit.",
@@ -351,6 +397,7 @@
                                             },
                                             "children": [
                                                 {
+                                                    "id": 46,
                                                     "name": "Neidisch",
                                                     "sprichwort": {
                                                         "text": "Neidlosigkeit ist die Genialität dessen, der von Schicksals Gnaden aus niemanden zu beneiden hat.",
@@ -358,6 +405,7 @@
                                                     }
                                                 },
                                                 {
+                                                    "id": 47,
                                                     "name": "Entrüstet",
                                                     "sprichwort": {
                                                         "text": "Jede Entrüstung hat ihre komische Seite.",
@@ -365,6 +413,7 @@
                                                     }
                                                 },
                                                 {
+                                                    "id": 48,
                                                     "name": "Empört",
                                                     "sprichwort": {
                                                         "text": "Ich bin empört meist über das, was keinen andern stört.",
@@ -376,6 +425,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 49,
                                     "name": "Rebellisch",
                                     "sprichwort": {
                                         "text": "Rebellion ist ein Knoten des Herzens, nicht des Verstandes.",
@@ -383,6 +433,7 @@
                                     }
                                 },
                                 {
+                                    "id": 50,
                                     "name": "Ablehnend",
                                     "sprichwort": {
                                         "text": "Reich sind wir nur durch das, was wir geben, und arm nur durch das, was wir ablehnen.",
@@ -390,6 +441,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 51,
                                             "name": "Aggressiv",
                                             "sprichwort": {
                                                 "text": "Angriff kann die beste Verteidigung sein, aber Aggression ist die schlechteste Defensive.",
@@ -397,6 +449,7 @@
                                             }
                                         },
                                         {
+                                            "id": 52,
                                             "name": "Provoziert",
                                             "sprichwort": {
                                                 "text": "Ein Künstler, der nicht provoziert, wird unsichtbar. Kunst, die keine starken Reaktionen auslöst, hat keinen Wert.",
@@ -404,6 +457,7 @@
                                             }
                                         },
                                         {
+                                            "id": 53,
                                             "name": "Feindlich",
                                             "sprichwort": {
                                                 "text": "Vergib deinen Feinden immer; nichts ärgert sie so sehr.",
@@ -415,6 +469,7 @@
                             ]
                         },
                         {
+                            "id": 54,
                             "name": "Gedemütigt",
                             "sprichwort": {
                                 "text": "Über große Demütigungen trösten wir uns selten - wir vergessen sie.",
@@ -422,6 +477,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 55,
                                     "name": "Verhöhnt",
                                     "sprichwort": {
                                         "text": "Heute gekrönt, morgen verhöhnt.",
@@ -429,6 +485,7 @@
                                     }
                                 },
                                 {
+                                    "id": 56,
                                     "name": "Respektlos behandelt",
                                     "sprichwort": {
                                         "text": "Respektlosigkeit verhindert, dass Liebe wächst.",
@@ -436,6 +493,7 @@
                                     }
                                 },
                                 {
+                                    "id": 57,
                                     "name": "Im Stich gelassen",
                                     "sprichwort": {
                                         "text": "Die Einsamkeit macht uns härter gegen uns und sehnsüchtiger gegen die Menschen, in beidem verbessert sie den Charakter.",
@@ -443,6 +501,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 58,
                                             "name": "Gekränkt",
                                             "sprichwort": {
                                                 "text": "Wenn man liebt, dann gedenkt man der Kränkung nicht lange.",
@@ -450,6 +509,7 @@
                                             }
                                         },
                                         {
+                                            "id": 59,
                                             "name": "Betrogen",
                                             "sprichwort": {
                                                 "text": "Wer hat dich so oft betrogen wie du selbst?",
@@ -457,6 +517,7 @@
                                             }
                                         },
                                         {
+                                            "id": 60,
                                             "name": "Verraten",
                                             "sprichwort": {
                                                 "text": "Ohne Verrat würde man Treue nicht bemerken.",
@@ -468,6 +529,7 @@
                             ]
                         },
                         {
+                            "id": 61,
                             "name": "Abwesend",
                             "sprichwort": {
                                 "text": "Abwesenheit schärft die Liebe, Präsenz stärkt sie.",
@@ -475,6 +537,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 62,
                                     "name": "Kühl",
                                     "sprichwort": {
                                         "text": "Kühle Köpfe schaffen klare Gedanken.",
@@ -482,6 +545,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 63,
                                             "name": "Verschlossen",
                                             "sprichwort": {
                                                 "text": "Ein verschlossenes Herz ist wie ein verschlossener Schatz, der nie entdeckt wird.",
@@ -489,6 +553,7 @@
                                             }
                                         },
                                         {
+                                            "id": 64,
                                             "name": "Reserviert",
                                             "sprichwort": {
                                                 "text": "Der Weise spricht, weil er etwas zu sagen hat; der Narr, weil er etwas sagen muss.",
@@ -498,6 +563,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 65,
                                     "name": "Benommen",
                                     "sprichwort": {
                                         "text": "Der Verstand ist wie ein Fenster im Nebel - man ahnt, was draußen ist, sieht es aber nicht klar.",
@@ -505,6 +571,7 @@
                                     }
                                 },
                                 {
+                                    "id": 66,
                                     "name": "Taub",
                                     "sprichwort": {
                                         "text": "Der Taube wird die Tanzenden immer für Verrückte halten.",
@@ -516,6 +583,7 @@
                     ]
                 },
                 {
+                    "id": 67,
                     "name": "Schwach",
                     "sprichwort": {
                         "text": "Der Mensch kennt seine Schwächen so wenig wie der Ochse seine Stärke.",
@@ -523,6 +591,7 @@
                     },
                     "children": [
                         {
+                            "id": 68,
                             "name": "Traurig",
                             "sprichwort": {
                                 "text": "Durch das Weinen fließt die Traurigkeit aus der Seele heraus.",
@@ -530,6 +599,7 @@
                             },
                             "children": [
                                 {
+                                    "id": 69,
                                     "name": "Frustriert",
                                     "sprichwort": {
                                         "text": "Nicht das Leben frustriert uns, sondern dass wir zu träge sind, etwas daraus zu machen.",
@@ -537,6 +607,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 70,
                                             "name": "Gekränkt",
                                             "sprichwort": {
                                                 "text": "Eine Hand die schenkt, wird nicht gekränkt.",
@@ -544,6 +615,7 @@
                                             },
                                             "children": [
                                                 {
+                                                    "id": 71,
                                                     "name": "Verlegen",
                                                     "sprichwort": {
                                                         "text": "Als Gott wegen der Masse Menschen, die aus sich selbst nichts machen können, in Verlegenheit war, da schuf er das Glück.",
@@ -551,6 +623,7 @@
                                                     }
                                                 },
                                                 {
+                                                    "id": 72,
                                                     "name": "Enttäuscht",
                                                     "sprichwort": {
                                                         "text": "Alle anderen Enttäuschungen sind gering im Vergleich zu denen, die wir an uns selbst erleben.",
@@ -560,6 +633,7 @@
                                             ]
                                         },
                                         {
+                                            "id": 73,
                                             "name": "Verzweifelt",
                                             "sprichwort": {
                                                 "text": "Aus den Trümmern unserer Verzweiflung bauen wir unseren Charakter.",
@@ -567,6 +641,7 @@
                                             },
                                             "children": [
                                                 {
+                                                    "id": 74,
                                                     "name": "Leidend",
                                                     "sprichwort": {
                                                         "text": "Seltsam, dass Leute, die zusammen leiden, stärkere Beziehungen haben, als die Leute, die sehr zufrieden sind.",
@@ -574,6 +649,7 @@
                                                     }
                                                 },
                                                 {
+                                                    "id": 75,
                                                     "name": "Energielos",
                                                     "sprichwort": {
                                                         "text": "Selbst eine Pause ist Teil des Weges",
@@ -581,6 +657,7 @@
                                                     },
                                                     "children": [
                                                         {
+                                                            "id": 76,
                                                             "name": "Antriebslos",
                                                             "sprichwort": {
                                                                 "text": "Lass dich treiben, bis du wieder Lust bekommst zu schwimmen.",
@@ -588,6 +665,7 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": 77,
                                                             "name": "Ohnmächtig",
                                                             "sprichwort": {
                                                                 "text": "Selbst Tyrannen fühlen sich ohnmächtig, wenn sie von Flöhen überfallen werden.",
@@ -595,6 +673,7 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": 78,
                                                             "name": "Niedergeschlagen/Deprimiert",
                                                             "sprichwort": {
                                                                 "text": "Auch aus Steinen, die dir in den Weg gelegt werden, kannst du etwas Schönes bauen.",
@@ -602,6 +681,7 @@
                                                             },
                                                             "children": [
                                                                 {
+                                                                    "id": 79,
                                                                     "name": "Leer",
                                                                     "sprichwort": {
                                                                         "text": "Leere ist nur der Moment vor dem Neubeginn.",
@@ -609,6 +689,7 @@
                                                                     }
                                                                 },
                                                                 {
+                                                                    "id": 80,
                                                                     "name": "Minderwertig",
                                                                     "sprichwort": {
                                                                         "text": "Niemand kann dir das Gefühl geben, minderwertig zu sein, ohne deine Zustimmung.",
@@ -616,6 +697,7 @@
                                                                     }
                                                                 },
                                                                 {
+                                                                    "id": 81,
                                                                     "name": "Einsam",
                                                                     "sprichwort": {
                                                                         "text": "Allein sein zu müssen ist das Schwerste, allein sein zu können das Schönste.",
@@ -623,6 +705,7 @@
                                                                     },
                                                                     "children": [
                                                                         {
+                                                                            "id": 82,
                                                                             "name": "Isoliert",
                                                                             "sprichwort": {
                                                                                 "text": "In der Stille der Isolation findest du oft die lauteste Stimme deines eigenen Herzens.",
@@ -630,6 +713,7 @@
                                                                             }
                                                                         },
                                                                         {
+                                                                            "id": 83,
                                                                             "name": "Verlassen",
                                                                             "sprichwort": {
                                                                                 "text": "Niemand versteht es, der Verlassenheit auf Dauer ein Ende zu setzen, außer der Mensch, der sie fühlt.",
@@ -647,21 +731,24 @@
                                     ]
                                 },
                                 {
-                                    "name":"Verletzlich",
+                                    "id": 84,
+                                    "name": "Verletzlich",
                                     "sprichwort": {
                                         "text": "Verletzlichkeit ist nicht der Verlust von Stärke, sondern der Mut, sie zu zeigen.",
                                         "author": "Brown"
                                     },
-                                    "children":[
+                                    "children": [
                                         {
-                                            "name":"Schikaniert",
+                                            "id": 85,
+                                            "name": "Schikaniert",
                                             "sprichwort": {
                                                 "text": "Mobbing ist der Versuch, Menschen in die Knie zu zwingen, die stark genug sind, sich zu erheben.",
                                                 "author": "Unbekannt"
                                             }
                                         },
                                         {
-                                            "name":"Zerbrechlich",
+                                            "id": 86,
+                                            "name": "Zerbrechlich",
                                             "sprichwort": {
                                                 "text": "Wir sind zerbrechlich. Doch es ist genau in dieser Zerbrechlichkeit, dass wir unser größtes Potenzial finden.",
                                                 "author": "Unbekannt"
@@ -670,6 +757,7 @@
                                     ]
                                 },
                                 {
+                                    "id": 87,
                                     "name": "Schuldig",
                                     "sprichwort": {
                                         "text": "Die einzige wirkliche Schuld, die man bereuen sollte, ist die, die man gegen sich selbst begangen hat.",
@@ -677,6 +765,7 @@
                                     },
                                     "children": [
                                         {
+                                            "id": 88,
                                             "name": "Beschämt",
                                             "sprichwort": {
                                                 "text": "Scham entsteht nicht aus dem, was du tust, sondern aus dem, was du über dich denkst, wenn du das tust.",
@@ -684,6 +773,7 @@
                                             }
                                         },
                                         {
+                                            "id": 89,
                                             "name": "Reumütig",
                                             "sprichwort": {
                                                 "text": "Nichts bereuen ist aller Weisheit Anfang.",
@@ -695,21 +785,24 @@
                             ]
                         },
                         {
-                            "name":"Gelangweilt",
+                            "id": 90,
+                            "name": "Gelangweilt",
                             "sprichwort": {
                                 "text": "Langeweile ist das, was entsteht, wenn man zu lange nachdenkt, ohne etwas zu tun.",
                                 "author": "Kafka"
                             },
-                            "children":[
+                            "children": [
                                 {
-                                    "name":"Gleichgültig",
+                                    "id": 91,
+                                    "name": "Gleichgültig",
                                     "sprichwort": {
                                         "text": "Gleichgültigkeit ist der schönste Weg, sich aus allem herauszuhalten, doch sie führt zur inneren Leere.",
                                         "author": "Unbekannt"
                                     }
                                 },
                                 {
-                                    "name":"Teilnahmslos",
+                                    "id": 92,
+                                    "name": "Teilnahmslos",
                                     "sprichwort": {
                                         "text": "Teilnahmslosigkeit ist nicht das Ende des Schmerzes, sondern das Ende der Hoffnung.",
                                         "author": "Unbekannt"
@@ -718,21 +811,24 @@
                             ]
                         },
                         {
-                            "name":"Müde",
+                            "id": 93,
+                            "name": "Müde",
                             "sprichwort": {
                                 "text": "Wenn du müde bist, lerne zu ruhen - nicht aufzugeben.",
                                 "author": "Banksy"
                             },
-                            "children":[
+                            "children": [
                                 {
-                                    "name":"Schläfrig",
+                                    "id": 94,
+                                    "name": "Schläfrig",
                                     "sprichwort": {
                                         "text": "Schlaf ist die beste Meditation",
                                         "author": "Dalai Lama"
                                     }
                                 },
                                 {
-                                    "name":"Unfokussiert",
+                                    "id": 95,
+                                    "name": "Unfokussiert",
                                     "sprichwort": {
                                         "text": "Wenn du nicht weißt, wohin du gehst, wirst du niemals wissen, wann du angekommen bist.",
                                         "author": "Confucius"
@@ -743,42 +839,48 @@
                     ]
                 },
                 {
-                    "name":"Unruhig",
+                    "id": 96,
+                    "name": "Unruhig",
                     "sprichwort": {
                         "text": "In der Unruhe des Lebens versteckt sich die Stille des Geistes.",
                         "author": "Buddha"
                     },
-                    "children":[
+                    "children": [
                         {
-                            "name":"Gestresst",
+                            "id": 97,
+                            "name": "Gestresst",
                             "sprichwort": {
                                 "text": "Stress ist nicht das, was dir passiert. Es ist die Art und Weise, wie du darauf reagierst",
                                 "author": "Selye"
                             },
-                            "children":[
+                            "children": [
                                 {
-                                    "name":"Überfordert",
+                                    "id": 98,
+                                    "name": "Überfordert",
                                     "sprichwort": {
                                         "text": "Der Mensch wächst an den Herausforderungen, nicht an den Aufgaben.",
                                         "author": "Einstein"
                                     }
                                 },
                                 {
-                                    "name":"Angespannt",
+                                    "id": 99,
+                                    "name": "Angespannt",
                                     "sprichwort": {
                                         "text": "Die Kunst, Anspannung zu lösen, liegt nicht im Vermeiden, sondern im Verstehen des Moments.",
                                         "author": "Unbekannt"
                                     },
-                                    "children":[
+                                    "children": [
                                         {
-                                            "name":"Gehetzt",
+                                            "id": 100,
+                                            "name": "Gehetzt",
                                             "sprichwort": {
                                                 "text": "Eile ist der Feind des klaren Denkens.",
                                                 "author": "Seneca"
                                             }
                                         },
                                         {
-                                            "name":"Unter Druck",
+                                            "id": 101,
+                                            "name": "Unter Druck",
                                             "sprichwort": {
                                                 "text": "Unter Druck entstehen Diamanten.",
                                                 "author": "Kissinger"
@@ -787,7 +889,8 @@
                                     ]
                                 },
                                 {
-                                    "name":"Durchgedreht/Außer Kontrolle",
+                                    "id": 102,
+                                    "name": "Durchgedreht/Außer Kontrolle",
                                     "sprichwort": {
                                         "text": "Es ist nicht das Durchdrehen, das uns krank macht, sondern das Festhalten daran.",
                                         "author": "Unbekannt"
@@ -796,36 +899,41 @@
                             ]
                         },
                         {
-                            "name":"Besorgt",
+                            "id": 103,
+                            "name": "Besorgt",
                             "sprichwort": {
                                 "text": "Warum sich sorgen? Es gibt so viele, die das Leben für uns schon schwer genug machen.",
                                 "author": "Hemingway"
                             },
-                            "children":[
+                            "children": [
                                 {
-                                    "name":"Ängstlich",
-                                    "sprichwort":{
+                                    "id": 104,
+                                    "name": "Ängstlich",
+                                    "sprichwort": {
                                         "text": "Mut ist nicht die Abwesenheit von Angst, sondern die Entscheidung, dass etwas anderes wichtiger ist",
                                         "author": "Redmoon"
                                     },
-                                    "children":[
+                                    "children": [
                                         {
-                                            "name":"Überrascht",
+                                            "id": 105,
+                                            "name": "Überrascht",
                                             "sprichwort": {
                                                 "text": "Überraschungen sind wie das Salz des Lebens. Ohne sie würde es fade und uninteressant.",
                                                 "author": "Unbekannt"
                                             },
-                                            "children":[
+                                            "children": [
                                                 {
-                                                    "name":"Erschrocken",
+                                                    "id": 106,
+                                                    "name": "Erschrocken",
                                                     "sprichwort": {
                                                         "text": "Der Furchtsame erschrickt vor der Gefahr, der Feige in ihr, der Mutige nach ihr.",
                                                         "author": "Paul"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Irritiert",
-                                                    "sprichwort":{
+                                                    "id": 107,
+                                                    "name": "Irritiert",
+                                                    "sprichwort": {
                                                         "text": "Die größte Irritation entsteht oft aus Missverständnissen. Wahre Klarheit kommt durch Kommunikation.",
                                                         "author": "Unbekannt"
                                                     }
@@ -833,29 +941,33 @@
                                             ]
                                         },
                                         {
-                                            "name":"Bedroht",
+                                            "id": 108,
+                                            "name": "Bedroht",
                                             "sprichwort": {
                                                 "text": "Es gibt keinen besseren Weg, die Bedrohung zu überwinden, als ihr direkt in die Augen zu sehen",
                                                 "author": "Churchill"
                                             },
-                                            "children":[
+                                            "children": [
                                                 {
-                                                    "name":"Nervös",
+                                                    "id": 109,
+                                                    "name": "Nervös",
                                                     "sprichwort": {
                                                         "text": "Nervosität ist der Versuch des Körpers, uns vorzubereiten, wenn wir uns der Ungewissheit stellen.",
                                                         "author": "Rhimes"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Entblößt",
+                                                    "id": 110,
+                                                    "name": "Entblößt",
                                                     "sprichwort": {
                                                         "text": "Im Moment der Entblößung erkennen wir, dass das, was wir zu verbergen versuchten, oft das ist, was uns am meisten verbindet.",
                                                         "author": "Rilke"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Ausgegrenzt",
-                                                    "sprichwort":{
+                                                    "id": 111,
+                                                    "name": "Ausgegrenzt",
+                                                    "sprichwort": {
                                                         "text": "Ausgrenzung ist ein falsches Spiel, das nur denjenigen schadet, der sie ausübt",
                                                         "author": "Einstein"
                                                     }
@@ -865,65 +977,74 @@
                                     ]
                                 },
                                 {
-                                    "name":"Unsicher",
+                                    "id": 112,
+                                    "name": "Unsicher",
                                     "sprichwort": {
                                         "text": "Unsicherheit ist der Preis, den man für Freiheit zahlt.",
                                         "author": "Satre"
                                     },
-                                    "children":[
-                                     {
-                                        "name":"Hilflos",
-                                        "sprichwort": {
-                                            "text": "Hilflosigkeit ist nur eine Übergangsphase auf dem Weg zur Selbstermächtigung.",
-                                            "author": "Angelou"
+                                    "children": [
+                                        {
+                                            "id": 113,
+                                            "name": "Hilflos",
+                                            "sprichwort": {
+                                                "text": "Hilflosigkeit ist nur eine Übergangsphase auf dem Weg zur Selbstermächtigung.",
+                                                "author": "Angelou"
+                                            }
+                                        },
+                                        {
+                                            "id": 114,
+                                            "name": "Unbedeutend",
+                                            "sprichwort": {
+                                                "text": "Du bist nicht unbedeutend, du bist wichtig für die Welt, selbst wenn du das manchmal nicht fühlst.",
+                                                "author": "Rowling"
+                                            }
+                                        },
+                                        {
+                                            "id": 115,
+                                            "name": "Ungenügend",
+                                            "sprichwort": {
+                                                "text": "Es ist nicht wichtig, wie viele Male du fällst, sondern wie oft du wieder aufstehst.",
+                                                "author": "Lombardi"
+                                            }
                                         }
-                                     },
-                                     {
-                                        "name":"Unbedeutend",
-                                        "sprichwort": {
-                                            "text": "Du bist nicht unbedeutend, du bist wichtig für die Welt, selbst wenn du das manchmal nicht fühlst.",
-                                            "author": "Rowling"
-                                        }
-                                     },
-                                     {
-                                        "name":"Ungenügend",
-                                        "sprichwort": {
-                                            "text": "Es ist nicht wichtig, wie viele Male du fällst, sondern wie oft du wieder aufstehst.",
-                                            "author": "Lombardi"
-                                        }
-                                     }
                                     ]
                                 },
                                 {
-                                    "name":"Angewiedert",
+                                    "id": 116,
+                                    "name": "Angewiedert",
                                     "sprichwort": {
                                         "text": "Was uns angewidert macht, erinnert uns oft an den Teil von uns, den wir zu verdrängen versuchen.",
                                         "author": "Jung"
                                     },
-                                    "children":[
+                                    "children": [
                                         {
-                                            "name":"Voreingenommen",
+                                            "id": 117,
+                                            "name": "Voreingenommen",
                                             "sprichwort": {
                                                 "text": "Der Vorurteil ist der feige Weg, etwas ohne tiefere Kenntnis zu beurteilen.",
                                                 "author": "Twain"
                                             },
-                                            "children":[
+                                            "children": [
                                                 {
-                                                    "name":"Missbilligend",
+                                                    "id": 118,
+                                                    "name": "Missbilligend",
                                                     "sprichwort": {
                                                         "text": "Missbilligung ist die Kunst, das Positive im Anderen zu übersehen.",
                                                         "author": "Wilde"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Zögerlich",
+                                                    "id": 119,
+                                                    "name": "Zögerlich",
                                                     "sprichwort": {
                                                         "text": "Wer zu lange zögert, wird nie wissen, was hätte sein können.",
                                                         "author": "Coelho"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Abweisend",
+                                                    "id": 120,
+                                                    "name": "Abweisend",
                                                     "sprichwort": {
                                                         "text": "Die größte Abweisung kommt von uns selbst – wir sind oft die härtesten Kritiker.",
                                                         "author": "Unbekannt"
@@ -932,21 +1053,24 @@
                                             ]
                                         },
                                         {
-                                            "name":"Enttäuschung",
+                                            "id": 121,
+                                            "name": "Enttäuschung",
                                             "sprichwort": {
                                                 "text": "Die größten Enttäuschungen haben ihren Ursprung in zu großen Erwartungen.",
                                                 "author": "Ferstl"
                                             },
-                                            "children":[
+                                            "children": [
                                                 {
-                                                    "name":"Entsetzt",
-                                                    "sprichwort":{
+                                                    "id": 122,
+                                                    "name": "Entsetzt",
+                                                    "sprichwort": {
                                                         "text": "Der Mensch wird im Entsetzen nicht stärker, sondern zerbricht.",
                                                         "author": "Nietzsche"
                                                     }
                                                 },
                                                 {
-                                                    "name":"Zurückgewiesen",
+                                                    "id": 123,
+                                                    "name": "Zurückgewiesen",
                                                     "sprichwort": {
                                                         "text": "Die größte Ehre im Leben ist nicht, nie zurückgewiesen zu werden, sondern nach jeder Zurückweisung wieder aufzustehen.",
                                                         "author": "Mandela"
@@ -955,8 +1079,9 @@
                                             ]
                                         },
                                         {
-                                            "name":"Hasserfüllt",
-                                            "sprichwort":{
+                                            "id": 124,
+                                            "name": "Hasserfüllt",
+                                            "sprichwort": {
                                                 "text": "Wo Liebe wächst, gedeiht Leben - wo Hass aufkommt droht Untergang.",
                                                 "author": "Gandhi"
                                             }

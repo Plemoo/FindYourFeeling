@@ -5,6 +5,7 @@ interface CustomFlagDimension {
 }
 
 interface INestedFeelings {
+    id:number;
     name: string;
     sprichwort:ISprichwort
     children?: INestedFeelings[];
@@ -18,7 +19,7 @@ interface IStoredFeelings{
     storedFeelings:ISingleStoreFeeling[]
 }
 interface ISingleStoreFeeling{
-    name:string;
+    feelingId:number;
     count:number;
 }
 interface IWordCloudProps {

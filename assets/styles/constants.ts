@@ -1,6 +1,6 @@
 export const COLORS = {
-    primary: "#007BFF",
-    secondary: "#6C757D",
+    primary: "#7f5200",
+    secondary: "#AAF0C1",
     background: "#F8F9FA",
     text: "#212529",
     textLight: "#FFFFFF",
@@ -14,10 +14,10 @@ export const COLORS = {
 
   export const FONT_SIZES = {
     tiny:10,
-    small: 16,
-    medium: 20,
-    large: 30,
-    huge:40,
+    small: 20,
+    medium: 30,
+    large: 40,
+    huge:50,
   };
 
   export const LANGUAGE = {

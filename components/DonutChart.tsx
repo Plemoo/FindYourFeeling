@@ -111,7 +111,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, 
         <Text
           x={cx}
           y={cy+5}
-          fontSize={FONT_SIZES.medium}
+          fontSize={FONT_SIZES.small}
           fill={COLORS.text}
           textAnchor="middle"
           alignmentBaseline="middle"

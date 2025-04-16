@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     saveFeelingButton:{
-        backgroundColor: COLORS.feelingCenter,
+        backgroundColor: COLORS.primary,
         borderRadius:15,
     },
     disabledSaveFeelingButton:{
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal:30,
     },
     sprichwortText:{
-        fontSize: FONT_SIZES.large,
+        fontSize: FONT_SIZES.medium,
         color: COLORS.text,
         fontFamily:"DancingScript",
         textAlign: 'center'
@@ -60,7 +60,17 @@ export const styles = StyleSheet.create({
         fontFamily:"DancingScript",
         textAlign: 'center',
         marginTop: 10
+    },
+    heading1:{
+        fontFamily:"Raleway",
+        fontSize:FONT_SIZES.large
+    },
+    regularFont:{
+        fontFamily:"Raleway",
+        fontSize:FONT_SIZES.small,
+        color:COLORS.text
     }
+
 });
 
 export const modalStyles = StyleSheet.create({
@@ -85,13 +95,7 @@ export const modalStyles = StyleSheet.create({
     closeButton: {
         position: 'absolute',
         top: 5,
-        borderColor: COLORS.black,
-        backgroundColor: COLORS.background,
-        borderWidth: 2,
         right: 5,
-        width: 30,
-        height: 30,
-        borderRadius: 15,
         justifyContent: 'center',
         alignItems: 'center',
       },
