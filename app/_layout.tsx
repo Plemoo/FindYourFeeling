@@ -43,7 +43,7 @@ const RootLayout = () => {
                     return <TouchableOpacity style={{ paddingRight: 10 }} onPressIn={() => setModalVisible(!modalVisible)}>{getFlagByLanguageCode(i18n.language)}</TouchableOpacity>
                 },
                 headerLeft: () => {
-                    return <TouchableHighlight onPressIn={switchScreens}><SwitchScreenIcon/></TouchableHighlight>
+                    return <TouchableHighlight onPressIn={switchScreens}><SwitchScreenIcon currentRoute={segment}/></TouchableHighlight>
                 }
             }}>
                 <Stack.Screen name="index" options={{ title: t("IndexPage") }} />
@@ -57,9 +57,9 @@ const RootLayout = () => {
 function getFlagByLanguageCode(languageCode: string) {
     switch (languageCode) {
         case 'de':
-            return <GermanFlag customHeight={20} customWidth={40} />; // German Flag
+            return <GermanFlag customHeight={20} customWidth={40} square={false}/>; // German Flag
         case 'en':
-            return <UnionJackFlag customHeight={20} customWidth={40} />; // Union Jack Flag
+            return <UnionJackFlag customHeight={20} customWidth={40} square={false}/>; // Union Jack Flag
         default:
             return null;
     }

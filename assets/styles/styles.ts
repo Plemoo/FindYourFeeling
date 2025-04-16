@@ -62,3 +62,37 @@ export const styles = StyleSheet.create({
         marginTop: 10
     }
 });
+
+export const modalStyles = StyleSheet.create({
+    modalBackground: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+    },
+    modalContainer: {
+        backgroundColor: COLORS.background,
+        padding: 20,
+        borderRadius: 10,
+        paddingTop: 40,
+    },
+    modalTitle: {
+        fontFamily: "Raleway",
+        fontSize: FONT_SIZES.large,
+        paddingBottom: 20,
+        textAlign: 'center',
+    },
+    closeButton: {
+        position: 'absolute',
+        top: 5,
+        borderColor: COLORS.black,
+        backgroundColor: COLORS.background,
+        borderWidth: 2,
+        right: 5,
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+})

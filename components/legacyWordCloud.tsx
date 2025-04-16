@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Dimensions } from 'react-native';
 import Svg, { Text } from 'react-native-svg';
-import _, { forEach } from 'lodash';
+import _ from 'lodash';
 import { COLORS } from '@/assets/styles/constants';
 
 const { width, height } = Dimensions.get("window");
@@ -20,17 +20,20 @@ const { width, height } = Dimensions.get("window");
   
   function generateWordCloud(wordList:IWordCloudProps[]): PositionedWord[] {
     const positions: PositionedWord[] = [];
-    const cellSize = 60;
-  
-    const cols = Math.floor(width / cellSize);
-    const rows = Math.floor(height / cellSize);
+    const cellSize = 45;
+    const customWidth = Math.round(width);
+    const customHeight = Math.round(height);
+    // Teile die verfügbare Fläche in ein Grid auf
+    const cols = Math.floor(customWidth / cellSize);
+    const rows = Math.floor(customHeight / cellSize);
+    // Wähle den Mittelpunkt des Grids
     const centerX = Math.floor(cols / 2);
     const centerY = Math.floor(rows / 2);
-  
+    // Array mit false Einträgen grid.length == rows;  grid[x].length == cols
     const grid: boolean[][] = Array(rows)
       .fill(null)
       .map(() => Array(cols).fill(false));
-  
+
     const isFree = (x: number, y: number, w: number, h: number) => {
       if (x < 0 || y < 0 || x + w > cols || y + h > rows) return false;
       for (let dy = 0; dy < h; dy++) {
@@ -66,28 +69,38 @@ const { width, height } = Dimensions.get("window");
       const rotation: 0 | 90 = Math.random() > 0.5 ? 0 : 90;
       const length = wordObj.word.length;
   
-      const wordWidth = rotation === 0 ? length : 1;
-      const wordHeight = rotation === 0 ? 1 : length;
-  
+      const wordWidth = rotation === 0 ? length : 1; // 1 oder Wortläge
+      const wordHeight = rotation === 0 ? 1 : length; // 1 oder Wortlänge
+      console.log("HW",wordHeight,wordWidth)
       let placed = false;
       for (let [dx, dy] of spiralOffsets) {
-        const x = centerX + dx;
-        const y = centerY + dy;
-  
+        const x = centerX + dx; // dx punkte von der Mitte in x-Achse (cellSize ist ein Punkt)
+        const y = centerY + dy; // dy punkte von der Mitte in y-Achse (cellSize ist ein Punkt)
+        if(placed){
+          // console.log(wordObj.word)
+          break;
+        }
+        // console.log("xy",x,y)
         if (isFree(x, y, wordWidth, wordHeight)) {
+          // console.log("FREE",wordObj.word)
           const px = x * cellSize + cellSize / 2;
           const py = y * cellSize + cellSize / 2;
-  
           // Begrenzung prüfen (visuell)
           const wPixels = wordWidth * cellSize;
           const hPixels = wordHeight * cellSize;
-  
+          console.log("WIDTH",x,px,wPixels, width)
+          console.log("HEIGHT",y,py,hPixels, height)
+          // console.log("SUM W",px - wPixels / 2)
+          // console.log("SUM H",py - hPixels / 2)
+
           if (
             px - wPixels / 2 >= 0 &&
             px + wPixels / 2 <= width &&
             py - hPixels / 2 >= 0 &&
             py + hPixels / 2 <= height
           ) {
+            console.log("FOUND",wordObj.word)
+
             markUsed(x, y, wordWidth, wordHeight);
             positions.push({
               x: px,
@@ -100,12 +113,11 @@ const { width, height } = Dimensions.get("window");
               height: hPixels,
             });
             placed = true;
-            break;
           }
         }
       }
     }
-  
+    // console.log("Pos",grid)
     return positions;
   }
 

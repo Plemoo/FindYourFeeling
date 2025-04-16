@@ -1,4 +1,4 @@
-import { Modal, Platform, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Modal, Platform, Text, TouchableOpacity, View } from 'react-native'
 import UnionJackFlag from './UnionJackFlag';
 import GermanFlag from './GermanFlag';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -6,6 +6,7 @@ import { StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { COLORS, FONT_SIZES, LANGUAGE } from '@/assets/styles/constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { modalStyles } from '@/assets/styles/styles';
 
 interface LanguageSelectionModalProps {
     modalVisible: boolean;
@@ -13,44 +14,13 @@ interface LanguageSelectionModalProps {
 }
 
 const styles = StyleSheet.create({
-    modalBackground: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0.5)',
-    },
-    modalContainer: {
-        backgroundColor: COLORS.background,
-        padding: 20,
-        borderRadius: 10,
-        paddingTop: 40,
-    },
-    modalTitle: {
-        fontFamily: "Raleway",
-        fontSize: FONT_SIZES.medium,
-        paddingBottom: 20,
-        textAlign: 'center',
-    },
     flagContainer: {
         justifyContent: 'center',
         alignItems: 'center',
     },
     flagButton: {
         paddingBottom: 20,
-    },
-    closeButton: {
-        position: 'absolute',
-        top: 5,
-        borderColor: COLORS.black,
-        backgroundColor: COLORS.background,
-        borderWidth: 2,
-        right: 5,
-        width: 30,
-        height: 30,
-        borderRadius: 15,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
+    }
 });
 
 
@@ -79,19 +49,22 @@ const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({modalVis
             visible={modalVisible}
             onRequestClose={() => triggerSetModalVisible(!modalVisible)}
         >
-            <View style={styles.modalBackground}>
-                <View style={styles.modalContainer}>
-                    <Text style={styles.modalTitle}>{t("languageSelection")}</Text>
+            <View style={modalStyles.modalBackground}>
+                <View style={modalStyles.modalContainer}>
+                    <View>
+                    <Text style={modalStyles.modalTitle}>{t("languageSelection")}</Text>
                      {/* Back Icon Button */}
-                    <TouchableOpacity style={styles.closeButton} onPress={() => triggerSetModalVisible(!modalVisible)}>
+                    <TouchableOpacity style={modalStyles.closeButton} onPress={() => triggerSetModalVisible(!modalVisible)}>
                         <Icon name="arrow-back" size={25} color="black" />
                     </TouchableOpacity>
+                    </View>
+
                     <View style={styles.flagContainer}>
                         <TouchableOpacity style={styles.flagButton} onPress={() => changeLanguage(LANGUAGE.english)}>
-                            <UnionJackFlag />
+                            <UnionJackFlag square={true}/>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => changeLanguage(LANGUAGE.german)}>
-                            <GermanFlag/>
+                            <GermanFlag square={true}/>
                         </TouchableOpacity>
                     </View>
                 </View>

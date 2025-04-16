@@ -6,5 +6,7 @@
     "back":"Back",
     "IndexPage":"Welcome!",
     "FeelingsTrackerPage":"Feeling Tracker",
-    "languageSelection":"Choose your language"
+    "languageSelection":"Choose your language",
+    "overviewPage":"Overview",
+    "feelingPage":"My feeling"
   }

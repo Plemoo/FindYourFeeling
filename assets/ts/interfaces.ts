@@ -1,6 +1,7 @@
 interface CustomFlagDimension {
     customWidth?: number;
     customHeight?: number;
+    square:boolean
 }
 
 interface INestedFeelings {

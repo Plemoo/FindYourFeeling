@@ -9,7 +9,7 @@ import i18next from "../assets/ts/i18next";
 import { arraysEqual, getChildFeelingsBasedOnParent, getFeelingsBasedOnLanguage, getPathOfFeeling } from "@/assets/ts/indexFunctions";
 import Sprichwort from "@/components/Sprichwort";
 import { TouchableHighlight } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getStoredFeelingsAsync, storeFeelingInAsyncStorage } from "@/assets/ts/helper";
 
 
 export default function Index() {
@@ -60,22 +60,22 @@ export default function Index() {
 
   const saveSelectionAndReset = () => {
     // chosenFeeling zwischenspeichern
-    console.log("ALL KEYS", AsyncStorage.getAllKeys());
     let storedFeelingsKey: keyof IStoredFeelings = "storedFeelings";
-    AsyncStorage.getItem(storedFeelingsKey).then((value) => {
-      let storedFeelings: IStoredFeelings;
+    getStoredFeelingsAsync().then((value) => {
+      let storedFeelings: ISingleStoreFeeling[]=[];
       if (value == null) { // Wenn noch nichts gespeichert ist
-        storedFeelings = { storedFeelings: [{ name: chosenFeeling, count: 1, }] };
+        storedFeelings.push({ name: chosenFeeling, count: 1, });
       } else { // Wenn schon etwas gespeichert ist
-        storedFeelings = JSON.parse(value);
-        let feelingExists = storedFeelings.storedFeelings.find((feeling) => feeling.name === chosenFeeling);
+        storedFeelings = value.storedFeelings;
+        let feelingExists = storedFeelings.find((feeling) => feeling.name === chosenFeeling);
         if (feelingExists) {
           feelingExists.count++;
         } else {
-          storedFeelings.storedFeelings.push({ name: chosenFeeling, count: 1 });
+          storedFeelings.push({ name: chosenFeeling, count: 1 });
         }
       }
-      AsyncStorage.setItem(storedFeelingsKey, JSON.stringify(storedFeelings));
+      storeFeelingInAsyncStorage(storedFeelings);
+      // AsyncStorage.setItem(storedFeelingsKey, JSON.stringify(storedFeelings));
     });
     resetSelection();
   }
