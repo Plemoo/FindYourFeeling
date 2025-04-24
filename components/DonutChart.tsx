@@ -5,6 +5,7 @@ import Colors from 'color';
 import { useTranslation } from "react-i18next";   
 import { COLORS, FONT_SIZES } from '@/assets/styles/constants';
 import { styles } from '@/assets/styles/styles';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // Erzeugt einen Bogenpfad (ohne den Abschluss, für Text oder Stroke)
 const createArcPath = (cx: number, cy: number, r: number, startAngle: number, endAngle: number) => {
@@ -22,10 +23,11 @@ type DonutChartProps = {
   centerText: string; // Text in der Mitte
   randomizer: number;
   clickedFeeling:(value: string) => void;
-  allFeelings:INestedFeelings
+  allFeelings:INestedFeelings,
+  saveSelectionAndReset:()=>void;
 };
 
-const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, clickedFeeling, allFeelings}) => {
+const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, clickedFeeling, allFeelings,saveSelectionAndReset}) => {
   // Hier definieren wir die Größe des Donut-Diagramms
   const size = 350;             // Gesamtgröße der SVG
   const cx = size / 2;          // X-Zentrum
@@ -40,7 +42,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, 
   const gapAngle = 40;                     // Gap in Grad zwischen den Segmenten (klein halten für runde Enden)
 
   // Beispiel-Farben (kannst du anpassen)
-  const [colors, setColors] = useState<string[]>([COLORS.feelingOne, COLORS.feelingTwo, COLORS.feelingThree, COLORS.feelingFour]);
+  const [colors, setColors] = useState<string[]>([COLORS.feelingWheel, COLORS.feelingWheel, COLORS.feelingWheel, COLORS.feelingWheel]);
   const [lastFeelingColor, setLastFeelingColor] = useState<string>(COLORS.feelingCenter);
   const { t } = useTranslation();
 
@@ -63,12 +65,15 @@ const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, 
     setLastFeelingColor(lighterColors);
     setTimeout(()=>{
       setLastFeelingColor(oldColor);
-      clickedFeeling(centerText)
+      saveSelectionAndReset()
     },300)
   }
 
   return (
     <View style={styles.svgFeelingsContainer}>
+      <View style={{alignSelf:"flex-end"}}>
+        <Icon name='chevron-back-circle-outline' size={60} style={centerText == allFeelings.name?{opacity:0}:{opacity:1}} onPress={()=>clickedFeeling(centerText)}/>
+      </View>
       <Svg width={size} height={size}> 
       {words.map((word, i) => {
           // Berechne Start- und Endwinkel, sodass ein kleiner Gap entsteht:
@@ -130,7 +135,7 @@ const DonutChart: React.FC<DonutChartProps> = ({ words, centerText, randomizer, 
           fontFamily='Raleway'
           onPressIn={()=>lightenLastFeelingColorOnClick()}
           >
-            {centerText == allFeelings.name ? "": "("+t("back")+")"}
+            {centerText == allFeelings.name ? "": "("+t("feelingSelection")+")"}
           </Text>
       </Svg>
     </View>

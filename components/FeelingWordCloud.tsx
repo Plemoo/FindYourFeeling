@@ -100,9 +100,9 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
   }
 
   return (
-    <View>
+    <View style={{height:"100%"}}>
       {_.isEmpty(shownFeelings) ?
-        <Text>No Content</Text>
+        <Text>{t("noContent")}</Text>
         :
         <>
         <View style={{marginHorizontal:40, marginTop:20}}>
@@ -122,7 +122,7 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
             }}
             onWordPress={(word) => setTimeout(() => handleWordClick(word), 100)}
           />
-          <View style={{marginHorizontal:40}}>
+          <View style={{marginHorizontal:40,position:"absolute",bottom:20}}>
           <TouchableHighlight style={styles.saveFeelingButton} onPress={resetStoredFeelings}>
             <Text style={styles.saveFeelingButtonText}>{t("resetWordCloud")}</Text>
           </TouchableHighlight>

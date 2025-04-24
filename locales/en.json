@@ -1,14 +1,12 @@
 {
     "language": "Language",
-    "feelingsButton":"Click on how you feel",
-    "selectableFeelingButton":"I feel {{feeling}}",
-    "back":"Back",
-    "IndexPage":"Welcome!",
-    "FeelingsTrackerPage":"Find your feeling!",
+    "IndexPage":"Find your feeling!",
+    "FeelingsTrackerPage":"Feeling Cloud",
     "languageSelection":"Choose your language",
     "overviewPage":"Feeling Cloud",
     "feelingPage":"My feeling",
     "resetWordCloud":"Reset feelings",
-    "wordCloudClickHint":"Click on the shown feelings to see or change their significance."
-
+    "wordCloudClickHint":"Click on the shown feelings to see or change their significance.",
+    "feelingSelection":"How i feel",
+    "noContent":"Choose a feeling to show it in a Word Cloud"
   }

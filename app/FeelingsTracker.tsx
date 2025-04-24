@@ -1,10 +1,8 @@
 import { getStoredFeelingsAsync } from '@/assets/ts/helper';
-import { getFeelingsBasedOnLanguage, getPathOfFeeling } from '@/assets/ts/indexFunctions';
 import FeelingWordCloud from '@/components/FeelingWordCloud';
-import i18next from 'i18next';
 import _ from 'lodash';
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 
 const RandomComponent: React.FC = () => {
     const [isLoaded, setIsLoaded] = React.useState(false);
@@ -27,7 +25,7 @@ const RandomComponent: React.FC = () => {
             {!isLoaded ? (
                 <ActivityIndicator size="large" />
             ) :
-                <View >
+                <View style={{height:"100%"}}>
                     <FeelingWordCloud selectedFeelings={storedFeelingArray} />
                 </View>
             }

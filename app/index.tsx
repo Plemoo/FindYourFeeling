@@ -92,32 +92,13 @@ export default function Index() {
     setChosenFeeling(allFeelings.name);
   }
 
-  const getFeelingSaveButtonText = () => {
-    if (chosenFeeling == allFeelings.name) {
-      return t("feelingsButton")
-    } else {
-      return t("selectableFeelingButton", { feeling: chosenFeeling });
-    }
-  }
+
   return (
     <StrictMode>
       <View style={styles.container}>
         <Sprichwort text={sprichwort.text} author={sprichwort.author} />
         <View style={styles.feelingContainer}>
-          <DonutChart centerText={chosenFeeling} allFeelings={allFeelings} words={currentFeelings} randomizer={Math.round(Math.random() * 360)} clickedFeeling={(clickedFeeling) => calledByChild(clickedFeeling, chosenFeeling)} />
-          <View style={styles.saveFeelingButtonContainer}>
-            <TouchableHighlight
-              disabled={!chosenFeeling || chosenFeeling === allFeelings.name}
-              onPress={() => saveSelectionAndReset()}
-              style={
-                (!chosenFeeling || chosenFeeling === allFeelings.name)
-                  ? styles.disabledSaveFeelingButton
-                  : styles.saveFeelingButton
-              }
-            >
-              <ReactText style={styles.saveFeelingButtonText}>{getFeelingSaveButtonText()}</ReactText>
-            </TouchableHighlight>
-          </View>
+          <DonutChart centerText={chosenFeeling} allFeelings={allFeelings} words={currentFeelings} randomizer={Math.round(Math.random() * 360)} clickedFeeling={(clickedFeeling) => calledByChild(clickedFeeling, chosenFeeling)} saveSelectionAndReset={saveSelectionAndReset} />
         </View>
       </View>
     </StrictMode>

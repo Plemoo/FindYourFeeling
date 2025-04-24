@@ -1,14 +1,15 @@
 export const COLORS = {
-    primary: "#7f5200",
-    secondary: "#AAF0C1",
+    primary: "lightblue",
+    secondary: "#AAF0C1", // 
     background: "#F8F9FA",
     text: "#212529",
     textLight: "#FFFFFF",
     black:"#000000",
     feelingOne:'#AAF0C1', 
-    feelingTwo: '#efa94a',
+    feelingTwo: '#efa94a', // Orange
     feelingThree: '#B2A4D4',
     feelingFour:'#BEBEBE',
+    feelingWheel:"#efa94a", // Orange
     feelingCenter:"lightblue"
   };
 

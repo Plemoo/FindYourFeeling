@@ -1,14 +1,13 @@
 {
     "language": "Sprache",
-    "feelingsButton":"Klicke auf dein Gefühl",
-    "selectableFeelingButton":"Ich fühle (mich) {{feeling}}",
-    "back":"Zurück",
     "IndexPage":"Finde dein Gefühl!",
-    "FeelingsTrackerPage":"Gefühlstracker",
+    "FeelingsTrackerPage":"Gefühlswolke",
     "languageSelection":"Sprache auswählen",
     "overviewPage":"Gefühlswolke",
     "feelingPage":"Mein Gefühl",
     "resetWordCloud":"Gefühle zurücksetzen",
-    "wordCloudClickHint":"Klicke auf die dargestellten Gefühle um deren Relevanz zu sehen oder ändern."
+    "wordCloudClickHint":"Klicke auf ein Gefühl in der Word Cloud um deren Relevanz zu sehen oder ändern.",
+    "feelingSelection":"So fühle ich",
+    "noContent":"Wähle ein Gefühl aus um es in einer Word Cloud abzubilden"    
   }
   
