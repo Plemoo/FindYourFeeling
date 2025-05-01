@@ -4,18 +4,31 @@
     "appVersionSource": "remote"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
+    "production": {
+      "developmentClient": false,
+      "distribution": "store",
+      "android": {
+        "buildType": "apk",
+        "env": {
+          "EXPO_KOTLIN_VERSION": "1.9.25"
+        }
+      },
+      "ios": {
+        "simulator": false
+      }
     },
     "preview": {
-      "distribution": "internal"
-    },
-    "production": {
-      "autoIncrement": true
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "env": {
+          "EXPO_KOTLIN_VERSION": "1.9.25"
+        }
+      },
+      "ios": {
+        "simulator": true
+      }
     }
-  },
-  "submit": {
-    "production": {}
   }
 }

@@ -1,7 +1,7 @@
 import { COLORS, FONT_SIZES } from "@/assets/styles/constants";
 import { modalStyles, styles } from "@/assets/styles/styles";
 import { refactorFeelingIntoWord } from "@/assets/ts/feelingWordCloudFunctions";
-import {  getIdByFeeling, getStoredFeelingsAsync, storeFeelingInAsyncStorage } from "@/assets/ts/helper";
+import { getIdByFeeling, getStoredFeelingsAsync, storeFeelingInAsyncStorage } from "@/assets/ts/helper";
 import { getFeelingsBasedOnLanguage } from "@/assets/ts/indexFunctions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import _ from "lodash";
@@ -16,7 +16,7 @@ import WordCloud, { Word } from "rn-wordcloud"
 const { width, height } = Dimensions.get('window'); // Bildschirmgröße
 
 type WordCloudProps = {
-  selectedFeelings: ISingleStoreFeeling[]|undefined;
+  selectedFeelings: ISingleStoreFeeling[] | undefined;
 }
 
 const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
@@ -28,12 +28,12 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
   const [refreshKey, setRefreshKey] = useState(0); // Workaround, to force the Word Cloud to refresh, when it has changes
   const wordCloudColors = _.shuffle([COLORS.feelingCenter, COLORS.feelingOne, COLORS.feelingTwo, COLORS.feelingThree]); // Colors for the word cloud, shuffle to get random Color Assignment
   // Initialize the displayed words, just for the useState
-  const shownFeelingsBasedOnInput: Word[] = selectedFeelings ? refactorFeelingIntoWord(selectedFeelings, wordCloudColors, getFeelingsBasedOnLanguage(i18n.language)):[];
+  const shownFeelingsBasedOnInput: Word[] = selectedFeelings ? refactorFeelingIntoWord(selectedFeelings, wordCloudColors, getFeelingsBasedOnLanguage(i18n.language)) : [];
   const [shownFeelings, setShownFeelings] = useState(shownFeelingsBasedOnInput)
   i18n.on('languageChanged', () => {
-    const shownFeelingsBasedOnInput: Word[] = selectedFeelings ? refactorFeelingIntoWord(selectedFeelings, wordCloudColors, getFeelingsBasedOnLanguage(i18n.language)):[];
+    const shownFeelingsBasedOnInput: Word[] = selectedFeelings ? refactorFeelingIntoWord(selectedFeelings, wordCloudColors, getFeelingsBasedOnLanguage(i18n.language)) : [];
     setShownFeelings(shownFeelingsBasedOnInput)
-    setRefreshKey(refreshKey+1)
+    setRefreshKey(refreshKey + 1)
   })
   /**
    * opens modal and shows clicked feeling to change its value
@@ -56,29 +56,29 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
     if (modalFeelingValue == 0) { // lösche Wort aus Liste und aktualisiere den Async Storage
       getStoredFeelingsAsync().then((value) => {
         if (value != null) {
-          const filteredFeelingArray: ISingleStoreFeeling[] = value.storedFeelings.filter(feeling=>feeling.feelingId != getIdByFeeling(modalfeelingName,allFeelings)); // Behalte nur die Feelings, die nicht das aktuell zurückgesetze sind
+          const filteredFeelingArray: ISingleStoreFeeling[] = value.storedFeelings.filter(feeling => feeling.feelingId != getIdByFeeling(modalfeelingName, allFeelings)); // Behalte nur die Feelings, die nicht das aktuell zurückgesetze sind
           storeFeelingInAsyncStorage(filteredFeelingArray);
-          setShownFeelings(refactorFeelingIntoWord(filteredFeelingArray,wordCloudColors, allFeelings))
-          setRefreshKey(refreshKey+1); // Workaround to refresh the view with the new weights/value
+          setShownFeelings(refactorFeelingIntoWord(filteredFeelingArray, wordCloudColors, allFeelings))
+          setRefreshKey(refreshKey + 1); // Workaround to refresh the view with the new weights/value
         }
       })
     } else { // reduziere den Wert für das Wort in der Liste und aktualisiere den Async Storage
       getStoredFeelingsAsync().then((value) => {
         if (value != null) {
-          const storedFeelingArray: ISingleStoreFeeling[] = value.storedFeelings.map((feeling)=>setNewFeelingValue(feeling,allFeelings));
+          const storedFeelingArray: ISingleStoreFeeling[] = value.storedFeelings.map((feeling) => setNewFeelingValue(feeling, allFeelings));
           storeFeelingInAsyncStorage(storedFeelingArray);
-          setShownFeelings(refactorFeelingIntoWord(storedFeelingArray,wordCloudColors,allFeelings))
-          setRefreshKey(refreshKey+1); // Workaround to refresh the view with the new weights/value
+          setShownFeelings(refactorFeelingIntoWord(storedFeelingArray, wordCloudColors, allFeelings))
+          setRefreshKey(refreshKey + 1); // Workaround to refresh the view with the new weights/value
         }
       })
     }
     setFeelingModifyModalVisible(false);
   }
 
-  const setNewFeelingValue = (feeling:ISingleStoreFeeling, allFeelings:INestedFeelings)=>{
-    if(feeling.feelingId == getIdByFeeling(modalfeelingName,allFeelings)){
-      return {...feeling, count:modalFeelingValue}
-    }else{
+  const setNewFeelingValue = (feeling: ISingleStoreFeeling, allFeelings: INestedFeelings) => {
+    if (feeling.feelingId == getIdByFeeling(modalfeelingName, allFeelings)) {
+      return { ...feeling, count: modalFeelingValue }
+    } else {
       return feeling;
     }
   }
@@ -92,40 +92,43 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
       setModalFeelingValue(modalFeelingValue - 1)
     }
   }
-  const resetStoredFeelings = ()=>{
+  const resetStoredFeelings = () => {
     let storedFeelingsKey: keyof IStoredFeelings = "storedFeelings";
-    AsyncStorage.removeItem(storedFeelingsKey).finally(()=>{
+    AsyncStorage.removeItem(storedFeelingsKey).finally(() => {
       setShownFeelings([]);
     });
   }
 
   return (
-    <View style={{height:"100%"}}>
+    <View style={{ height: "100%" }}>
       {_.isEmpty(shownFeelings) ?
-        <Text>{t("noContent")}</Text>
+        <Text style={[styles.regularFont, { textAlign: "center" }]}>{t("noContent")}</Text>
         :
         <>
-        <View style={{marginHorizontal:40, marginTop:20}}>
-          <Text style={styles.regularFont}>{t("wordCloudClickHint")}</Text>
-        </View>
-          <WordCloud
-          key={refreshKey}
-            options={{
-              words: shownFeelings,
-              verticalEnabled: true,
-              minFont: FONT_SIZES.small,
-              maxFont: FONT_SIZES.huge,
-              fontOffset: 1,
-              width: width,
-              height: height/2,
-              fontFamily: "Raleway",
-            }}
-            onWordPress={(word) => setTimeout(() => handleWordClick(word), 100)}
-          />
-          <View style={{marginHorizontal:40,position:"absolute",bottom:20}}>
-          <TouchableHighlight style={styles.saveFeelingButton} onPress={resetStoredFeelings}>
-            <Text style={styles.saveFeelingButtonText}>{t("resetWordCloud")}</Text>
-          </TouchableHighlight>
+          <View style={{ marginHorizontal: 40, marginTop: 20 }}>
+            <Text style={styles.regularFont}>{t("wordCloudClickHint")}</Text>
+          </View>
+          <View style={{ flex: 1, alignContent: "center", alignSelf: "center", justifyContent: "center", alignItems: "center" }}>
+            <WordCloud
+              key={refreshKey}
+              options={{
+                words: shownFeelings,
+                verticalEnabled: true,
+                minFont: FONT_SIZES.tiny,
+                maxFont: FONT_SIZES.large,
+                fontOffset: 1,
+                width: width,
+                height: height / 2,
+                fontFamily: "Raleway",
+              }}
+              onWordPress={(word) => setTimeout(() => handleWordClick(word), 100)}
+            />
+          </View>
+
+          <View style={{ marginHorizontal: 40, position: "absolute", bottom: 20, left: 0, right: 0 }}>
+            <TouchableHighlight style={styles.saveFeelingButton} onPress={resetStoredFeelings}>
+              <Text style={styles.saveFeelingButtonText}>{t("resetWordCloud")}</Text>
+            </TouchableHighlight>
           </View>
 
           <Modal
@@ -148,7 +151,7 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
                   <TouchableOpacity onPress={() => decrementFeelingValue()}>
                     <Icon name="remove-circle-outline" size={50} color="black" />
                   </TouchableOpacity>
-                  <View style={{marginHorizontal:30}}>
+                  <View style={{ marginHorizontal: 30 }}>
                     <Text style={styles.heading1}>{modalFeelingValue}</Text>
                   </View>
                   <TouchableOpacity onPress={() => incrementFeelingValue()}>
@@ -157,7 +160,7 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
                 </View>
                 <View style={{ justifyContent: "center" }}>
                   <TouchableHighlight style={wordCloudStyles.applyWordCloudModalChangesButton} onPress={applyChangesOnModalClose}>
-                    <View style={{flexDirection:"row", justifyContent:"space-between", alignContent:"center", alignItems:"center"}}>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignContent: "center", alignItems: "center" }}>
                       <Icon name="save-outline" size={50} color={COLORS.primary}></Icon>
                     </View>
                   </TouchableHighlight>
@@ -171,19 +174,19 @@ const FeelingWordCloud: React.FC<WordCloudProps> = ({ selectedFeelings }) => {
   )
 }
 const wordCloudStyles = StyleSheet.create({
-    applyWordCloudModalChangesButton: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        // borderRadius:5,
-        // borderWidth:2,
-        // borderColor:COLORS.primary,
-        // backgroundColor:COLORS.primary,
-        marginTop:20
-    },
-    applyWordCloudModalChangesButtonText:{
-      textAlign: "center",
-      fontSize: FONT_SIZES.medium
-    }
+  applyWordCloudModalChangesButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    // borderRadius:5,
+    // borderWidth:2,
+    // borderColor:COLORS.primary,
+    // backgroundColor:COLORS.primary,
+    marginTop: 20
+  },
+  applyWordCloudModalChangesButtonText: {
+    textAlign: "center",
+    fontSize: FONT_SIZES.medium
+  }
 });
 
 export default FeelingWordCloud;

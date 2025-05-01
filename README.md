@@ -16,6 +16,37 @@ This App is intended to help you identify your current feelings
    ```bash
     npx expo start
    ```
+or
+
+   ```bash
+    npm run start
+   ```
+
+3. Steps to Production
+   
+   As long as the App runs on the Emulator or the Phone through the expo app, no prebuild is necessary. But once it is tested for production always prebuild it
+   
+4. Prebuild the app (Android/iOS Package will be created new since the --clean Flag is provided)
+
+   ```bash
+    npm run prebuild
+   ```
+5. Test app on android or iOS
+
+   ```bash
+    npm run android
+   ```
+   ```bash
+    npm run ios
+   ```
+
+6. Everything works, App is ready to be build
+
+   ```bash
+    npm run build
+   ```
+
+   The build and stacktrace is found online via expo.dev
 
 In the output, you'll find options to open the app in a
 

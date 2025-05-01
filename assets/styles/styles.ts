@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
     saveFeelingButton:{
         backgroundColor: COLORS.primary,
         borderRadius:15,
+        width: "100%"
     },
     disabledSaveFeelingButton:{
         backgroundColor: '#a9a9a9',  // Grauer Hintergrund

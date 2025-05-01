@@ -10,8 +10,13 @@
     "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
-      "jsEngine": "jsc"
+      "jsEngine": "jsc",
+      "bundleIdentifier": "com.plemo.FindYourFeeling",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
+    "icon": "assets/images/FeelingIcon.png",
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
@@ -27,20 +32,31 @@
       [
         "expo-splash-screen",
         {
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#232323",
+          "image": "./assets/images/splash_FeelingIcon.png",
+          "dark": {
+            "image": "./assets/images/splash_FeelingIcon.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
         }
       ],
       [
         "expo-font",
         {
           "fonts": [
-            "assets/fonts/Raleway-Italic-VariableFont_wght.ttf",
+            "assets/fonts/DancingScript-VariableFont_wght.ttf",
             "assets/fonts/Raleway-VariableFont_wght.ttf"
           ]
         }
-      ]
+      ],
+      [
+      "expo-build-properties",
+      {
+        "android":{
+          "kotlinVersion":"1.9.25"
+        }
+      }]
     ],
     "experiments": {
       "typedRoutes": true
