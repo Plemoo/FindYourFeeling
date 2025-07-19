@@ -11,7 +11,9 @@
         "buildType": "app-bundle",
         "env": {
           "EXPO_KOTLIN_VERSION": "1.9.25"
-        }
+        },
+        "autoIncrement": true
+
       },
       "ios": {
         "simulator": false
