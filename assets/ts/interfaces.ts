@@ -1,29 +1,41 @@
-interface CustomFlagDimension {
-    customWidth?: number;
-    customHeight?: number;
-    square:boolean
-}
-
-interface INestedFeelings {
-    id:number;
+/* eslint-disable @typescript-eslint/no-unused-vars */
+declare global {
+  interface INestedFeelings {
+    id: number;
+    key: string;
     name: string;
-    sprichwort:ISprichwort
+    description?: string;
     children?: INestedFeelings[];
   }
-interface ISprichwort {
-    text: string;
-    author: string;
+
+  interface IFeelingReference {
+    key: string;
+    customLabel?: string;
+  }
+
+  interface IFeelingCheckIn {
+    id: string;
+    feeling: IFeelingReference;
+    intensity: number;
+    additionalFeelings: IFeelingReference[];
+    needs: string[];
+    createdAt: string;
+    migrated?: boolean;
+  }
+
+  interface IStoredCheckIns {
+    version: 2;
+    checkIns: IFeelingCheckIn[];
+  }
+
+  interface ISingleStoreFeeling {
+    feelingId: number;
+    count: number;
+  }
+
+  interface ILegacyStoredFeelings {
+    storedFeelings: ISingleStoreFeeling[];
+  }
 }
 
-interface IStoredFeelings{
-    storedFeelings:ISingleStoreFeeling[]
-}
-interface ISingleStoreFeeling{
-    feelingId:number;
-    count:number;
-}
-interface IWordCloudProps {
-    word:string
-    weight:number
-    color:string
-}
+export {};

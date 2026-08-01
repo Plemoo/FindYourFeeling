@@ -6,11 +6,8 @@
     "orientation": "portrait",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
-      "jsEngine": "jsc",
       "bundleIdentifier": "com.plemo.FindYourFeeling",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -50,13 +47,7 @@
           ]
         }
       ],
-      [
-      "expo-build-properties",
-      {
-        "android":{
-          "kotlinVersion":"1.9.25"
-        }
-      }]
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true

@@ -1,68 +1,133 @@
-import { SplashScreen, Stack, useNavigation, useRootNavigationState, useRouter, useSegments } from "expo-router";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { useFonts } from 'expo-font';
-import { Button, Text, TouchableHighlight, TouchableOpacity } from "react-native";
-import LanguageSelectionModal from "@/components/LanguageSelectionModal";
+import { Ionicons } from "@expo/vector-icons";
+import { SplashScreen, Stack, useRouter, useSegments } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { useEffect, useState } from "react";
+import { Pressable, StyleSheet, Text } from "react-native";
+import { useFonts } from "expo-font";
 import { useTranslation } from "react-i18next";
-import GermanFlag from "@/components/GermanFlag";
-import UnionJackFlag from "@/components/UnionJackFlag";
-import _ from "lodash";
-import SwitchScreenIcon from "@/components/SwitchScreenIcon";
 
-SplashScreen.preventAutoHideAsync(); // SplashScreen will be shown and not dismissed automatically (doesnt work on web)
-const RootLayout = () => {
-    const [fontsLoaded] = useFonts({
-        'Raleway': require('../assets/fonts/Raleway-SemiBold.ttf'),
-        "DancingScript": require('../assets/fonts/DancingScript-VariableFont_wght.ttf'),
-    });
-    useEffect(() => {
-        if (fontsLoaded) {
-            SplashScreen.hideAsync(); // Hide the splash screen after everything was loaded 
-        }
-    }, [fontsLoaded])
+import "../assets/ts/i18next";
+import LanguageSelectionModal from "@/components/LanguageSelectionModal";
+import { COLORS } from "@/assets/styles/constants";
 
-    // Routing Hooks
-    const segment = useSegments();// String[] - Array of segments in the current route (e.g. ["FeelingsTracker"] or [])
-    const navigation = useRouter();
+void SplashScreen.preventAutoHideAsync();
 
-    const switchScreens = () => {
-        if(_.isEmpty(segment)){ // Check if the segment is empty (i.e. the root screen)
-            navigation.navigate("/FeelingsTracker")
-        }else if(segment[0] == "FeelingsTracker"){ // Check if the first segment is "FeelingsTracker"
-            navigation.navigate("/")
-        }
+export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    Raleway: require("../assets/fonts/Raleway-SemiBold.ttf"),
+    DancingScript: require("../assets/fonts/DancingScript-VariableFont_wght.ttf"),
+  });
+  const [modalVisible, setModalVisible] = useState(false);
+  const segments = useSegments();
+  const router = useRouter();
+  const { t, i18n } = useTranslation();
+  const onTracker = segments[0] === "FeelingsTracker";
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      void SplashScreen.hideAsync();
     }
-    const { t, i18n } = useTranslation();
-    const [modalVisible, setModalVisible] = useState(false);
-    return (
-        <>
-            <Stack screenOptions={{
-                headerTitleStyle: { fontFamily: "Raleway" },
-                headerTitleAlign: "center",
-                headerRight: () => {
-                    return <TouchableOpacity style={{ paddingRight: 10 }} onPressIn={() => setModalVisible(!modalVisible)}>{getFlagByLanguageCode(i18n.language)}</TouchableOpacity>
-                },
-                headerLeft: () => {
-                    return <TouchableHighlight onPressIn={switchScreens}><SwitchScreenIcon currentRoute={segment}/></TouchableHighlight>
-                }
-            }}>
-                <Stack.Screen name="index" options={{title: t("IndexPage")}} />
-                <Stack.Screen name="FeelingsTracker" options={{ title: t("FeelingsTrackerPage") }} />
-            </Stack>
-            <LanguageSelectionModal modalVisible={modalVisible} triggerSetModalVisible={setModalVisible} />
-        </>
-    );
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
+
+  return (
+    <>
+      <StatusBar style="dark" />
+      <Stack
+        screenOptions={{
+          contentStyle: { backgroundColor: COLORS.background },
+          headerStyle: { backgroundColor: COLORS.background },
+          headerShadowVisible: false,
+          headerTitleAlign: "center",
+          headerTitleStyle: {
+            color: COLORS.text,
+            fontFamily: "Raleway",
+            fontSize: 16,
+          },
+          headerLeft: () => (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={
+                onTracker ? t("feelingPage") : t("overviewPage")
+              }
+              onPress={() =>
+                onTracker ? router.replace("/") : router.push("/FeelingsTracker")
+              }
+              style={({ pressed }) => [
+                layoutStyles.headerButton,
+                pressed && layoutStyles.headerButtonPressed,
+              ]}
+            >
+              <Ionicons
+                name={onTracker ? "heart-outline" : "stats-chart-outline"}
+                size={20}
+                color={COLORS.primary}
+              />
+            </Pressable>
+          ),
+          headerRight: () => (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t("language")}
+              onPress={() => setModalVisible(true)}
+              style={({ pressed }) => [
+                layoutStyles.languageButton,
+                pressed && layoutStyles.headerButtonPressed,
+              ]}
+            >
+              <Text style={layoutStyles.languageText}>
+                {i18n.language.toUpperCase()}
+              </Text>
+              <Ionicons
+                name="chevron-down"
+                size={14}
+                color={COLORS.primary}
+              />
+            </Pressable>
+          ),
+        }}
+      >
+        <Stack.Screen name="index" options={{ title: t("IndexPage") }} />
+        <Stack.Screen
+          name="FeelingsTracker"
+          options={{ title: t("FeelingsTrackerPage") }}
+        />
+      </Stack>
+      <LanguageSelectionModal
+        modalVisible={modalVisible}
+        triggerSetModalVisible={setModalVisible}
+      />
+    </>
+  );
 }
 
-function getFlagByLanguageCode(languageCode: string) {
-    switch (languageCode) {
-        case 'de':
-            return <GermanFlag customHeight={20} customWidth={40} square={false}/>; // German Flag
-        case 'en':
-            return <UnionJackFlag customHeight={20} customWidth={40} square={false}/>; // Union Jack Flag
-        default:
-            return null;
-    }
-}
-
-export default RootLayout;
+const layoutStyles = StyleSheet.create({
+  headerButton: {
+    width: 42,
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: COLORS.primarySoft,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  languageButton: {
+    minWidth: 60,
+    height: 42,
+    borderRadius: 14,
+    paddingHorizontal: 11,
+    backgroundColor: COLORS.primarySoft,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 4,
+  },
+  languageText: {
+    color: COLORS.primary,
+    fontFamily: "Raleway",
+    fontSize: 13,
+  },
+  headerButtonPressed: {
+    opacity: 0.7,
+  },
+});

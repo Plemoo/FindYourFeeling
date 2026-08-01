@@ -1,38 +1,46 @@
-import { getStoredFeelingsAsync } from '@/assets/ts/helper';
-import FeelingWordCloud from '@/components/FeelingWordCloud';
-import _ from 'lodash';
-import React, { useEffect } from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { useFocusEffect } from "expo-router";
+import React, { useCallback, useState } from "react";
+import { ActivityIndicator, View } from "react-native";
 
-const RandomComponent: React.FC = () => {
-    const [isLoaded, setIsLoaded] = React.useState(false);
-    const [storedFeelingArray, setStoredFeelingArray] = React.useState<ISingleStoreFeeling[]>([]);
+import { getFeelingCheckInsAsync } from "@/assets/ts/helper";
+import { COLORS } from "@/assets/styles/constants";
+import FeelingWordCloud from "@/components/FeelingWordCloud";
 
-    useEffect(() => {
-        // Hier kannst du den Code einfügen, der beim Laden des Components ausgeführt werden soll
-        getStoredFeelingsAsync().then((value) => {
-            if (value != null) {
-                setStoredFeelingArray(value.storedFeelings);
-            }
-        }).finally(() => {
-            setIsLoaded(true); // Setze den Ladezustand auf true, wenn die Daten geladen sind
+export default function FeelingsTracker() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [checkIns, setCheckIns] = useState<IFeelingCheckIn[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      setIsLoaded(false);
+      getFeelingCheckInsAsync()
+        .then((value) => {
+          if (active) setCheckIns(value);
+        })
+        .finally(() => {
+          if (active) setIsLoaded(true);
         });
-    }, []);
+      return () => {
+        active = false;
+      };
+    }, [])
+  );
 
-    // TODO: Noch eine Art Kalender bauen um pro Tag das hauptgefühl anzuzeigen
+  if (!isLoaded) {
     return (
-        <>
-            {!isLoaded ? (
-                <ActivityIndicator size="large" />
-            ) :
-                <View style={{height:"100%"}}>
-                    <FeelingWordCloud selectedFeelings={storedFeelingArray} />
-                </View>
-            }
-        </>
-
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: COLORS.background,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ActivityIndicator size="large" color={COLORS.primary} />
+      </View>
     );
-};
+  }
 
-
-export default RandomComponent;
+  return <FeelingWordCloud checkIns={checkIns} />;
+}
