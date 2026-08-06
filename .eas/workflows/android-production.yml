@@ -13,3 +13,12 @@ jobs:
     params:
       platform: android
       profile: production
+
+  submit_android:
+    name: Submit Android to Google Play internal testing
+    needs: [build_android]
+    type: submit
+    environment: production
+    params:
+      build_id: ${{ needs.build_android.outputs.build_id }}
+      profile: production

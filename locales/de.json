@@ -4,6 +4,8 @@
   "FeelingsTrackerPage": "Rückblick",
   "languageSelection": "Sprache wählen",
   "languageSelectionHint": "In welcher Sprache möchtest du deine Gefühle erkunden?",
+  "privacyPolicy": "Datenschutzerklärung",
+  "privacyPolicyHint": "Informationen zu deinen lokal gespeicherten Daten",
   "overviewPage": "Rückblick",
   "feelingPage": "Check-in",
   "checkIn": "Dein Moment",

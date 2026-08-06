@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { SplashScreen, Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { Pressable, StyleSheet, Text } from "react-native";
+import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import { useTranslation } from "react-i18next";
 
@@ -11,6 +11,9 @@ import LanguageSelectionModal from "@/components/LanguageSelectionModal";
 import { COLORS } from "@/assets/styles/constants";
 
 void SplashScreen.preventAutoHideAsync();
+
+const PRIVACY_POLICY_URL =
+  "https://plemoo.github.io/FindYourFeeling/privacyPolicy.html";
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -67,24 +70,41 @@ export default function RootLayout() {
             </Pressable>
           ),
           headerRight: () => (
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel={t("language")}
-              onPress={() => setModalVisible(true)}
-              style={({ pressed }) => [
-                layoutStyles.languageButton,
-                pressed && layoutStyles.headerButtonPressed,
-              ]}
-            >
-              <Text style={layoutStyles.languageText}>
-                {i18n.language.toUpperCase()}
-              </Text>
-              <Ionicons
-                name="chevron-down"
-                size={14}
-                color={COLORS.primary}
-              />
-            </Pressable>
+            <View style={layoutStyles.headerActions}>
+              <Pressable
+                accessibilityRole="link"
+                accessibilityLabel={t("privacyPolicy")}
+                onPress={() => void Linking.openURL(PRIVACY_POLICY_URL)}
+                style={({ pressed }) => [
+                  layoutStyles.headerButton,
+                  pressed && layoutStyles.headerButtonPressed,
+                ]}
+              >
+                <Ionicons
+                  name="shield-checkmark-outline"
+                  size={20}
+                  color={COLORS.primary}
+                />
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t("language")}
+                onPress={() => setModalVisible(true)}
+                style={({ pressed }) => [
+                  layoutStyles.languageButton,
+                  pressed && layoutStyles.headerButtonPressed,
+                ]}
+              >
+                <Text style={layoutStyles.languageText}>
+                  {i18n.language.toUpperCase()}
+                </Text>
+                <Ionicons
+                  name="chevron-down"
+                  size={14}
+                  color={COLORS.primary}
+                />
+              </Pressable>
+            </View>
           ),
         }}
       >
@@ -103,6 +123,11 @@ export default function RootLayout() {
 }
 
 const layoutStyles = StyleSheet.create({
+  headerActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
   headerButton: {
     width: 42,
     height: 42,

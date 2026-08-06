@@ -4,6 +4,8 @@
   "FeelingsTrackerPage": "Reflection",
   "languageSelection": "Choose language",
   "languageSelectionHint": "Which language would you like to use to explore your feelings?",
+  "privacyPolicy": "Privacy policy",
+  "privacyPolicyHint": "Information about your locally stored data",
   "overviewPage": "Reflection",
   "feelingPage": "Check-in",
   "checkIn": "Your moment",

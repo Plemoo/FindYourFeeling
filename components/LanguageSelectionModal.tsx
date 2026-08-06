@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React from "react";
 import {
+  Linking,
   Modal,
   Platform,
   Pressable,
@@ -23,6 +24,9 @@ const languages = [
   { code: LANGUAGE.german, short: "DE", label: "Deutsch" },
   { code: LANGUAGE.english, short: "EN", label: "English" },
 ];
+
+const PRIVACY_POLICY_URL =
+  "https://plemoo.github.io/FindYourFeeling/privacyPolicy.html";
 
 const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({
   modalVisible,
@@ -91,6 +95,33 @@ const LanguageSelectionModal: React.FC<LanguageSelectionModalProps> = ({
               );
             })}
           </View>
+          <View style={languageStyles.divider} />
+          <Pressable
+            accessibilityRole="link"
+            accessibilityLabel={t("privacyPolicy")}
+            onPress={() => void Linking.openURL(PRIVACY_POLICY_URL)}
+            style={({ pressed }) => [
+              languageStyles.privacyLink,
+              pressed && languageStyles.privacyLinkPressed,
+            ]}
+          >
+            <Ionicons
+              name="shield-checkmark-outline"
+              size={21}
+              color={COLORS.primary}
+            />
+            <View style={languageStyles.privacyCopy}>
+              <Text style={languageStyles.privacyTitle}>
+                {t("privacyPolicy")}
+              </Text>
+              <Text style={styles.mutedText}>{t("privacyPolicyHint")}</Text>
+            </View>
+            <Ionicons
+              name="open-outline"
+              size={18}
+              color={COLORS.textMuted}
+            />
+          </Pressable>
         </View>
       </View>
     </Modal>
@@ -140,6 +171,31 @@ const languageStyles = StyleSheet.create({
     color: COLORS.text,
     fontFamily: "Raleway",
     fontSize: 16,
+  },
+  divider: {
+    height: 1,
+    marginVertical: 20,
+    backgroundColor: COLORS.border,
+  },
+  privacyLink: {
+    minHeight: 64,
+    borderRadius: 18,
+    paddingHorizontal: 14,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  privacyLinkPressed: {
+    backgroundColor: COLORS.primarySoft,
+  },
+  privacyCopy: {
+    flex: 1,
+  },
+  privacyTitle: {
+    color: COLORS.text,
+    fontFamily: "Raleway",
+    fontSize: 15,
+    marginBottom: 2,
   },
 });
 
