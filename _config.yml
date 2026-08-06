@@ -1,0 +1,17 @@
+title: FindYourFeeling
+description: Privacy policy and app information for FindYourFeeling.
+exclude:
+  - .eas/
+  - app/
+  - assets/
+  - components/
+  - locales/
+  - store-listing/
+  - README.md
+  - app.config.js
+  - app.json
+  - eas.json
+  - eslint.config.js
+  - package-lock.json
+  - package.json
+  - tsconfig.json
