@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "FindYourFeeling",
+    "name": "Finde dein Gefühl",
     "slug": "FindYourFeeling",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.plemo.FindYourFeeling",
+      "bundleIdentifier": "com.plemo.FindeDeinGefuehl",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -18,7 +18,7 @@
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
       },
-      "package": "com.plemo.FindYourFeeling"
+      "package": "com.plemo.FindeDeinGefuehl"
     },
     "web": {
       "bundler": "metro",

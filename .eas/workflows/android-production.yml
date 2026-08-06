@@ -1,0 +1,15 @@
+name: Android production build
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build_android:
+    name: Build Android production AAB
+    type: build
+    environment: production
+    params:
+      platform: android
+      profile: production
