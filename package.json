@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "build": "eas build --profile production"
+    "build": "eas build --profile production",
+    "build:development": "eas build --platform android --profile development"
   },
   "jest": {
     "preset": "jest-expo"
@@ -19,13 +20,13 @@
     "@expo/vector-icons": "^15.0.3",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@react-navigation/native": "^7.0.14",
-    "expo": "~57.0.9",
+    "expo": "~57.0.10",
     "expo-constants": "~57.0.8",
     "expo-dev-client": "~57.0.10",
     "expo-font": "~57.0.1",
     "expo-haptics": "~57.0.1",
-    "expo-linking": "~57.0.4",
-    "expo-router": "~57.0.9",
+    "expo-linking": "~57.0.5",
+    "expo-router": "~57.0.10",
     "expo-splash-screen": "~57.0.5",
     "expo-status-bar": "~57.0.1",
     "expo-system-ui": "~57.0.2",
