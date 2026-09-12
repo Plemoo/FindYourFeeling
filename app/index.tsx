@@ -66,6 +66,7 @@ export default function Index() {
   const selectedName = primaryFeeling
     ? getFeelingLabel(primaryFeeling, feelings)
     : selected.name;
+  const scrollKey = `${selectedKey}:${primaryFeeling?.key ?? ""}:${primaryFeeling?.customLabel ?? ""}`;
 
   const resetDetails = () => {
     setIntensity(3);
@@ -147,6 +148,7 @@ export default function Index() {
   return (
     <View style={styles.screen}>
       <ScrollView
+        key={scrollKey}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
@@ -286,6 +288,7 @@ export default function Index() {
                       name="arrow-forward-circle"
                       size={23}
                       color={color.accent}
+                      style={screenStyles.optionArrow}
                     />
                   </Pressable>
                 );
@@ -632,8 +635,10 @@ const screenStyles = StyleSheet.create({
     color: COLORS.text,
     fontFamily: "Raleway",
     fontSize: 17,
+    lineHeight: 23,
     marginTop: 14,
-    marginBottom: 5,
+    marginBottom: 10,
+    flexShrink: 0,
   },
   optionDescription: {
     color: COLORS.textMuted,
@@ -641,8 +646,9 @@ const screenStyles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 17,
     marginBottom: 10,
-    flexGrow: 1,
+    flexShrink: 0,
   },
+  optionArrow: { marginTop: "auto" },
   result: { alignItems: "center", paddingVertical: 16 },
   resultIcon: {
     width: 66,
