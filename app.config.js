@@ -1,7 +1,4 @@
-const appJson = require('./app.json');
-
-module.exports = () => {
-  const config = appJson.expo;
+module.exports = ({ config }) => {
   const variant = process.env.APP_VARIANT;
   const internalVariant = ['development', 'preview'].includes(variant)
     ? variant

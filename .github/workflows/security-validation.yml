@@ -1,0 +1,71 @@
+name: Security validation
+
+on:
+  pull_request:
+    branches:
+      - master
+      - security/fix-node-forge-alert-161
+  push:
+    branches:
+      - security/remediate-remaining-dependencies-doctor
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use pinned Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+          cache: npm
+
+      - name: Verify pinned toolchain
+        run: |
+          test "$(node --version)" = "v22.14.0"
+          test "$(npm --version)" = "10.9.2"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit
+
+      - name: Check Expo project
+        env:
+          COREPACK_ENABLE_PROJECT_SPEC: "0"
+        run: npm exec --yes --package=expo-doctor@1.21.8 -- expo-doctor
+
+      - name: Evaluate Expo configuration variants
+        run: |
+          ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-default.json"
+          APP_VARIANT=production ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-production.json"
+          APP_VARIANT=development ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-development.json"
+          APP_VARIANT=preview ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-preview.json"
+
+      - name: Export application bundles
+        run: |
+          ./node_modules/.bin/expo export --platform web --output-dir "$RUNNER_TEMP/export-web"
+          ./node_modules/.bin/expo export --platform android --output-dir "$RUNNER_TEMP/export-android"
+          ./node_modules/.bin/expo export --platform ios --output-dir "$RUNNER_TEMP/export-ios"
+
+      - name: Confirm validation left no tracked changes
+        run: git diff --exit-code
+
+      - name: Audit complete dependency tree
+        run: npm audit
