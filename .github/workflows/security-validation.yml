@@ -4,10 +4,11 @@ on:
   pull_request:
     branches:
       - master
-      - security/fix-node-forge-alert-161
+      - security/remediate-remaining-dependencies-doctor
   push:
     branches:
       - security/remediate-remaining-dependencies-doctor
+      - security/migrate-expo-sdk-58
 
 permissions:
   contents: read
@@ -27,45 +28,82 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
-          cache: npm
 
-      - name: Verify pinned toolchain
+      - name: Configure Corepack cache
+        run: echo "COREPACK_HOME=$RUNNER_TEMP/corepack" >> "$GITHUB_ENV"
+
+      - name: Prepare pinned pnpm
         run: |
           test "$(node --version)" = "v22.14.0"
           test "$(npm --version)" = "10.9.2"
+          test "$(corepack --version)" = "0.31.0"
+          corepack prepare pnpm@10.34.9+sha512.f49b5a8ea0fdedb44bb3c0c1d6575092a53c2950d95b7ad15df11f17974877a2de3a01c07e934e9b28ce716e51c09a94962c7306d09be2e1e4b18a8c8762fd32 --activate
+          test "$(corepack pnpm --version)" = "10.34.9"
+          test "$(node -p "require('./package.json').packageManager")" = "pnpm@10.34.9+sha512.f49b5a8ea0fdedb44bb3c0c1d6575092a53c2950d95b7ad15df11f17974877a2de3a01c07e934e9b28ce716e51c09a94962c7306d09be2e1e4b18a8c8762fd32"
 
       - name: Install dependencies
-        run: npm ci
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: Validate dependency tree
+        run: corepack pnpm list --depth Infinity
 
       - name: Run tests
-        run: npm run test:ci
+        run: corepack pnpm run test:ci
 
       - name: Lint
-        run: npm run lint
+        run: corepack pnpm run lint
 
       - name: Typecheck
-        run: ./node_modules/.bin/tsc --noEmit
+        run: corepack pnpm exec tsc --noEmit
 
       - name: Check Expo project
-        env:
-          COREPACK_ENABLE_PROJECT_SPEC: "0"
-        run: npm exec --yes --package=expo-doctor@1.21.8 -- expo-doctor
+        run: corepack pnpm dlx expo-doctor@1.21.8
 
       - name: Evaluate Expo configuration variants
         run: |
-          ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-default.json"
-          APP_VARIANT=production ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-production.json"
-          APP_VARIANT=development ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-development.json"
-          APP_VARIANT=preview ./node_modules/.bin/expo config --type public --json > "$RUNNER_TEMP/config-preview.json"
+          corepack pnpm exec expo config --type public --json > "$RUNNER_TEMP/config-default.json"
+          APP_VARIANT=production corepack pnpm exec expo config --type public --json > "$RUNNER_TEMP/config-production.json"
+          APP_VARIANT=development corepack pnpm exec expo config --type public --json > "$RUNNER_TEMP/config-development.json"
+          APP_VARIANT=preview corepack pnpm exec expo config --type public --json > "$RUNNER_TEMP/config-preview.json"
+          APP_VARIANT=unknown corepack pnpm exec expo config --type public --json > "$RUNNER_TEMP/config-unknown.json"
+          node scripts/compare-expo-configs.js \
+            "$RUNNER_TEMP/config-default.json" \
+            "$RUNNER_TEMP/config-production.json" \
+            "$RUNNER_TEMP/config-development.json" \
+            "$RUNNER_TEMP/config-preview.json" \
+            "$RUNNER_TEMP/config-unknown.json"
 
       - name: Export application bundles
         run: |
-          ./node_modules/.bin/expo export --platform web --output-dir "$RUNNER_TEMP/export-web"
-          ./node_modules/.bin/expo export --platform android --output-dir "$RUNNER_TEMP/export-android"
-          ./node_modules/.bin/expo export --platform ios --output-dir "$RUNNER_TEMP/export-ios"
+          corepack pnpm exec expo export --platform web --output-dir "$RUNNER_TEMP/export-web"
+          corepack pnpm exec expo export --platform android --output-dir "$RUNNER_TEMP/export-android"
+          corepack pnpm exec expo export --platform ios --output-dir "$RUNNER_TEMP/export-ios"
 
       - name: Confirm validation left no tracked changes
         run: git diff --exit-code
 
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use pinned Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+
+      - name: Configure Corepack cache
+        run: echo "COREPACK_HOME=$RUNNER_TEMP/corepack" >> "$GITHUB_ENV"
+
+      - name: Prepare pinned pnpm
+        run: |
+          test "$(corepack --version)" = "0.31.0"
+          corepack prepare pnpm@10.34.9+sha512.f49b5a8ea0fdedb44bb3c0c1d6575092a53c2950d95b7ad15df11f17974877a2de3a01c07e934e9b28ce716e51c09a94962c7306d09be2e1e4b18a8c8762fd32 --activate
+          test "$(corepack pnpm --version)" = "10.34.9"
+
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
+
       - name: Audit complete dependency tree
-        run: npm audit
+        run: corepack pnpm audit
