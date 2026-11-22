@@ -17,9 +17,6 @@ concurrency:
   group: security-validation-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  COREPACK_HOME: ${{ runner.temp }}/corepack
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -31,6 +28,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
+
+      - name: Configure Corepack cache
+        run: echo "COREPACK_HOME=$RUNNER_TEMP/corepack" >> "$GITHUB_ENV"
 
       - name: Prepare pinned pnpm
         run: |
@@ -92,6 +92,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
+
+      - name: Configure Corepack cache
+        run: echo "COREPACK_HOME=$RUNNER_TEMP/corepack" >> "$GITHUB_ENV"
 
       - name: Prepare pinned pnpm
         run: |
