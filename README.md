@@ -8,18 +8,18 @@ This App is intended to help you identify your current feelings
 1. Install dependencies
 
    ```bash
-   npm install
+   corepack pnpm install --frozen-lockfile
    ```
 
 2. Start the app
 
    ```bash
-    npx expo start
+    corepack pnpm exec expo start
    ```
 or
 
    ```bash
-    npm run start
+    corepack pnpm run start
    ```
 
 3. Steps to Production
@@ -29,21 +29,21 @@ or
 4. Prebuild the app (Android/iOS Package will be created new since the --clean Flag is provided)
 
    ```bash
-    npm run prebuild
+    corepack pnpm run prebuild
    ```
 5. Test app on android or iOS
 
    ```bash
-    npm run android
+    corepack pnpm run android
    ```
    ```bash
-    npm run ios
+    corepack pnpm run ios
    ```
 
 6. Everything works, App is ready to be build
 
    ```bash
-    npm run build
+    corepack pnpm run build
    ```
 
    The build and stacktrace is found online via expo.dev

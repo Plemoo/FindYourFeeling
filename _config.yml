@@ -12,6 +12,6 @@ exclude:
   - app.json
   - eas.json
   - eslint.config.js
-  - package-lock.json
+  - pnpm-lock.yaml
   - package.json
   - tsconfig.json
